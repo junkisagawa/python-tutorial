@@ -45,12 +45,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=M+PLUS+1p:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"M PLUS 1p";--md-code-font:"Fira Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans JP";--md-code-font:"Fira Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../docs/extra.css">
+      <link rel="stylesheet" href="../extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -278,7 +278,7 @@
   
     
   
-  まとめと発展
+  まとめと
 
       </a>
     </li>
@@ -538,7 +538,7 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      型（データの種類）
+      型（データの種類）とは？
     </span>
   </a>
   
@@ -547,7 +547,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      型の自動判別
+      型の自動判別（動的型付け）
     </span>
   </a>
   
@@ -556,7 +556,7 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      型の確認
+      型の確認方法
     </span>
   </a>
   
@@ -565,7 +565,7 @@
         <li class="md-nav__item">
   <a href="#qa" class="md-nav__link">
     <span class="md-ellipsis">
-      よくある間違い・Q&amp;A
+      よくある間違いとQ&amp;A
     </span>
   </a>
   
@@ -877,7 +877,7 @@
   
   
   <span class="md-ellipsis">
-    まとめと発展
+    まとめと
     
   </span>
   
@@ -969,7 +969,7 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      型（データの種類）
+      型（データの種類）とは？
     </span>
   </a>
   
@@ -978,7 +978,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      型の自動判別
+      型の自動判別（動的型付け）
     </span>
   </a>
   
@@ -987,7 +987,7 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      型の確認
+      型の確認方法
     </span>
   </a>
   
@@ -996,7 +996,7 @@
         <li class="md-nav__item">
   <a href="#qa" class="md-nav__link">
     <span class="md-ellipsis">
-      よくある間違い・Q&amp;A
+      よくある間違いとQ&amp;A
     </span>
   </a>
   
@@ -1019,46 +1019,114 @@
 
 
 <h1 id="_1">変数と型</h1>
+<p>変数と型はPythonプログラミングの基礎です。このページでは「変数とは何か」「型とは何か」について詳しく解説します。</p>
 <hr />
 <h2 id="_2">変数とは？</h2>
-<p>変数は「データ（値）に名前をつけて保存する箱」です。</p>
-<ul>
-<li>例：</li>
-</ul>
+<p>変数とは、「データ（値）に名前をつけて保存する箱」のようなものです。</p>
+<p>具体的な例を見てみましょう。</p>
 <pre><code class="language-python">name = &quot;たろう&quot;
 age = 25
 </code></pre>
-<p>この例では、<code>name</code> という箱に「たろう」、<code>age</code> という箱に「25」を入れています。</p>
-<hr />
-<h2 id="_3">型（データの種類）</h2>
-<p>Pythonにはいろいろな「型」があります。
-- 文字列（str）："こんにちは"
-- 整数（int）：10, -5
-- 小数（float）：3.14, -0.5
-- 真偽値（bool）：True, False</p>
-<hr />
-<h2 id="_4">型の自動判別</h2>
-<p>Pythonは「=」で値を入れると、自動で型を判断してくれます。</p>
-<pre><code class="language-python">x = 10      # 整数（int）
-y = &quot;abc&quot;  # 文字列（str）
-</code></pre>
-<hr />
-<h2 id="_5">型の確認</h2>
-<pre><code class="language-python">print(type(x))  # &lt;class 'int'&gt;
-print(type(y))  # &lt;class 'str'&gt;
-</code></pre>
-<hr />
-<h2 id="qa">よくある間違い・Q&amp;A</h2>
+<p>このコードでは、</p>
 <ul>
-<li>変数名は英数字と「_」だけ。日本語も使えるけど英語推奨</li>
-<li>変数名の最初は数字NG（例：1nameはダメ）</li>
-<li>型が違うと計算できないことがある</li>
+<li><code>name</code> という変数に文字列「たろう」を保存しています。</li>
+<li><code>age</code> という変数に整数の25を保存しています。</li>
 </ul>
+<p>変数に値を保存することを「代入」と呼びます。</p>
+<hr />
+<h2 id="_3">型（データの種類）とは？</h2>
+<p>Pythonにはデータを分類する「型」があります。主な型は以下の通りです。</p>
+<table>
+<thead>
+<tr>
+<th>型名（型）</th>
+<th>説明</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文字列（str）</td>
+<td>文字や文を表します</td>
+<td>"こんにちは", "Python"</td>
+</tr>
+<tr>
+<td>整数（int）</td>
+<td>整数値を表します</td>
+<td>10, -5</td>
+</tr>
+<tr>
+<td>小数（float）</td>
+<td>小数点を含む数値を表します</td>
+<td>3.14, -0.5</td>
+</tr>
+<tr>
+<td>真偽値（bool）</td>
+<td>真（True）または偽（False）を表します</td>
+<td>True, False</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">型の自動判別（動的型付け）</h2>
+<p>Pythonは変数への代入時に、自動的に型を判別します。</p>
+<p>例：</p>
+<pre><code class="language-python">x = 10       # 整数型（int）として判別
+y = &quot;abc&quot;    # 文字列型（str）として判別
+z = 3.14     # 小数型（float）として判別
+is_valid = True  # 真偽値型（bool）として判別
+</code></pre>
+<hr />
+<h2 id="_5">型の確認方法</h2>
+<p>変数の型を確認するには、<code>type()</code> 関数を使います。</p>
+<p>例：</p>
+<pre><code class="language-python">x = 10
+y = &quot;abc&quot;
+z = 3.14
+
+print(type(x))  # 出力：&lt;class 'int'&gt;
+print(type(y))  # 出力：&lt;class 'str'&gt;
+print(type(z))  # 出力：&lt;class 'float'&gt;
+</code></pre>
+<hr />
+<h2 id="qa">よくある間違いとQ&amp;A</h2>
+<ul>
+<li>
+<p><strong>変数名のルール</strong></p>
+</li>
+<li>
+<p>英数字とアンダースコア（_）のみ使用可能です。</p>
+</li>
+<li>
+<p>日本語も使用できますが、読みやすさや国際性の観点から英語を推奨します。</p>
+</li>
+<li>
+<p><strong>数字から始まる変数名はNG</strong></p>
+</li>
+<li>
+<p>例：<code>1name</code> は使えません。代わりに <code>name1</code> のようにしましょう。</p>
+</li>
+<li>
+<p><strong>型が異なると演算が失敗する</strong></p>
+</li>
+<li>
+<p>整数と文字列を直接計算するとエラーになります。</p>
+</li>
+<li>例：</li>
+</ul>
+<pre><code class="language-python"># 間違った例
+x = &quot;10&quot;
+y = 5
+# print(x + y) はエラーになります。
+
+# 正しい例（型変換）
+print(int(x) + y)  # 出力：15
+</code></pre>
 <hr />
 <blockquote>
-<p>変数は「データに名前をつけて管理する」ための大事な道具です！ </p>
+<p>変数は「データに名前をつけて管理する」ための非常に重要な仕組みです。</p>
 </blockquote>
-<p><a href="../python_basic_if/">次へ ▶ 条件分岐</a> </p>
+<p><a href="../python_basic_if/">次へ ▶ 条件分岐</a></p>
 
 
 
