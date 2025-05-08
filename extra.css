@@ -1,0 +1,8 @@
+/* 以前のカスタムを解除し、デフォルトに戻す */
+h1, h2, .md-typeset h1, .md-typeset h2 {
+  color: inherit !important;
+  border: none !important;
+  padding: 0 !important;
+  background: none !important;
+  border-radius: 0 !important;
+} 
