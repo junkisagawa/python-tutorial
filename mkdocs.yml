@@ -1,0 +1,54 @@
+site_name: Python & Flask トレーニング
+site_description: COBOL経験者向けPython & Flaskトレーニング教材
+site_author: トレーニング運営
+
+# モダンなカラーパレット
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: ダークモード
+    - scheme: default
+      primary: teal
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: ライトモード
+  features:
+    - navigation.tabs
+    - navigation.top
+    - content.code.annotate
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+  font:
+    text: "IBM Plex Sans JP"
+    code: "Fira Mono"
+
+extra_css:
+  - extra.css
+
+nav:
+  - はじめに: index.md
+  - Python基礎:
+      - Pythonとは: python_intro.md
+      - 環境セットアップ: python_env.md
+      - 変数と型: python_basic_variables.md
+      - 条件分岐: python_basic_if.md
+      - ループ: python_basic_loop.md
+      - 関数: python_basic_func.md
+      - コレクション（リスト・辞書・セット）: python_basic_collection.md
+      - ファイル操作: python_basic_file.md
+      - エラー処理: python_basic_error.md
+  - Flask入門:
+      - Flask概要: flask_intro.md
+      - Flask API開発: flask_api.md
+      - DB連携: flask_db.md
+      - エラーハンドリング: flask_error.md
+  - まとめと: summary.md
+  - 追加課題: challenge.md
+  - 付録: appendix.md 
