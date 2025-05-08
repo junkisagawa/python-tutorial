@@ -45,8 +45,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=M+PLUS+1p:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"M PLUS 1p";--md-code-font:"Fira Mono"}</style>
       
     
     
@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="pink">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="light-blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,7 +125,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="ダークモード"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="light-blue"  aria-label="ダークモード"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="ダークモード" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
@@ -135,7 +135,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="ライトモード"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="light-blue"  aria-label="ライトモード"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="ライトモード" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
@@ -529,6 +529,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Macの場合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homebrew" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrewのインストール方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyenvpython" class="md-nav__link">
+    <span class="md-ellipsis">
+      pyenvとPythonのインストール
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -552,6 +576,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. エディタ（開発ツール）の準備">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      VS Codeのインストール方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -567,9 +606,42 @@
           <li class="md-nav__item">
   <a href="#windowsmaclinux" class="md-nav__link">
     <span class="md-ellipsis">
-      仮想環境の作り方（Windows/Mac/Linux共通）
+      仮想環境の作成と操作方法（Windows/Mac/Linux共通）
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="仮想環境の作成と操作方法（Windows/Mac/Linux共通）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      仮想環境作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      仮想環境の有効化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      仮想環境を抜ける
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -585,12 +657,27 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="4. パッケージ管理（pip）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      pipコマンドの例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#5-qa" class="md-nav__link">
     <span class="md-ellipsis">
-      5. よくあるトラブルQ&amp;A
+      5. よくあるトラブルQ\&amp;A
     </span>
   </a>
   
@@ -1031,6 +1118,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Macの場合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homebrew" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrewのインストール方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyenvpython" class="md-nav__link">
+    <span class="md-ellipsis">
+      pyenvとPythonのインストール
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1054,6 +1165,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. エディタ（開発ツール）の準備">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      VS Codeのインストール方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1069,9 +1195,42 @@
           <li class="md-nav__item">
   <a href="#windowsmaclinux" class="md-nav__link">
     <span class="md-ellipsis">
-      仮想環境の作り方（Windows/Mac/Linux共通）
+      仮想環境の作成と操作方法（Windows/Mac/Linux共通）
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="仮想環境の作成と操作方法（Windows/Mac/Linux共通）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      仮想環境作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      仮想環境の有効化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      仮想環境を抜ける
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1087,12 +1246,27 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="4. パッケージ管理（pip）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      pipコマンドの例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#5-qa" class="md-nav__link">
     <span class="md-ellipsis">
-      5. よくあるトラブルQ&amp;A
+      5. よくあるトラブルQ\&amp;A
     </span>
   </a>
   
@@ -1116,79 +1290,119 @@
 
 <h1 id="python">Python環境のセットアップ（初心者向けガイド）</h1>
 <p>Pythonを使い始めるには「インストール」「エディタの準備」「仮想環境」の3つが大切です。<br />
-事前準備でインストールまで完了している方は、<a href="## 3. 仮想環境とは？">3. 仮想環境とは？</a>まで進んでください。</p>
+事前準備でインストールまで完了している方は、<a href="#3-仮想環境とは？">3. 仮想環境とは？</a>まで進んでください。</p>
 <hr />
 <h2 id="1-python">1. Pythonのインストール</h2>
 <h3 id="windows">Windowsの場合</h3>
 <ol>
-<li>公式サイト（https://www.python.org/downloads/）から最新版をダウンロード</li>
-<li>インストーラーを実行し「Add Python to PATH」に必ずチェック</li>
-<li>インストール後、コマンドプロンプトで <code>python --version</code> を実行し、バージョンが表示されればOK</li>
+<li>公式サイト（<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>）から最新版をダウンロードします。</li>
+<li>ダウンロードしたインストーラーを実行し、「Add Python to PATH」に必ずチェックを入れてインストールを開始します。</li>
+<li>インストール後、コマンドプロンプトを開き、次のコマンドでPythonのバージョンを確認します。</li>
 </ol>
+<pre><code class="language-cmd">python --version
+</code></pre>
+<p>バージョン番号が表示されれば、正常にインストールされています。</p>
 <h3 id="mac">Macの場合</h3>
-<ul>
-<li>macOSには最初からPythonが入っていますが、最新版を使うには「Homebrew」や「pyenv」がおすすめです。</li>
-<li>例：</li>
-</ul>
+<p>macOSには最初からPythonが入っていますが、最新版を利用するために「Homebrew」と「pyenv」の使用を推奨します。</p>
+<h4 id="homebrew">Homebrewのインストール方法</h4>
+<p>ターミナルを開き、次のコマンドを入力します。</p>
+<pre><code class="language-bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+<h4 id="pyenvpython">pyenvとPythonのインストール</h4>
 <pre><code class="language-bash">brew install pyenv
 pyenv install 3.11.0
 pyenv global 3.11.0
 python --version
 </code></pre>
+<p>バージョンが表示されれば正常です。</p>
 <h3 id="linux">Linuxの場合</h3>
-<ul>
-<li>多くのディストリで <code>sudo apt install python3</code> などでインストールできます。</li>
-</ul>
+<p>Ubuntuの場合、次のコマンドでインストールできます。</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install python3 python3-venv python3-pip
+python3 --version
+</code></pre>
 <hr />
 <h2 id="2">2. エディタ（開発ツール）の準備</h2>
-<ul>
-<li><strong>VS Code</strong>（無料・多機能・おすすめ）</li>
-<li>https://code.visualstudio.com/ からダウンロード</li>
-<li>「Python拡張機能」をインストール</li>
-<li><strong>PyCharm</strong>（本格派向け）</li>
-<li>メモ帳やテキストエディタでもOKですが、VS Code推奨</li>
-</ul>
+<p>開発に使うエディタとしては「Visual Studio Code（VS Code）」がおすすめです。</p>
+<h3 id="vs-code">VS Codeのインストール方法</h3>
+<ol>
+<li><a href="https://code.visualstudio.com/">公式サイト</a>からダウンロード</li>
+<li>インストール後、「Python拡張機能」をVS Codeのマーケットプレースからインストール</li>
+</ol>
+<p>他の選択肢として「PyCharm」もあり、本格的な開発環境が整います。</p>
 <hr />
 <h2 id="3">3. 仮想環境とは？</h2>
+<p>仮想環境とは、プロジェクトごとに独立したPython環境を作成する仕組みです。これによりライブラリのバージョン衝突を防げます。</p>
+<h3 id="windowsmaclinux">仮想環境の作成と操作方法（Windows/Mac/Linux共通）</h3>
+<h4 id="_1">仮想環境作成</h4>
+<pre><code class="language-bash">python -m venv myenv
+</code></pre>
+<h4 id="_2">仮想環境の有効化</h4>
 <ul>
-<li>仮想環境は「プロジェクトごとに使うPythonやライブラリを分けて管理できる箱」です。</li>
-<li>これにより、他のプロジェクトとライブラリのバージョンがぶつからず安心です。</li>
+<li>Windowsの場合</li>
 </ul>
-<h3 id="windowsmaclinux">仮想環境の作り方（Windows/Mac/Linux共通）</h3>
-<pre><code class="language-bash"># venvを使う例（標準機能）
-python -m venv venv
-
-# 仮想環境を有効化
-# Windows:
-venv\Scripts\activate
-# Mac/Linux:
-source venv/bin/activate
-
-# 仮想環境を抜ける
-deactivate
+<pre><code class="language-cmd">myenv\Scripts\activate
+</code></pre>
+<ul>
+<li>Mac/Linuxの場合</li>
+</ul>
+<pre><code class="language-bash">source myenv/bin/activate
+</code></pre>
+<p>仮想環境を有効にすると、プロンプトに仮想環境の名前が表示されます。</p>
+<h4 id="_3">仮想環境を抜ける</h4>
+<pre><code class="language-bash">deactivate
 </code></pre>
 <hr />
 <h2 id="4-pip">4. パッケージ管理（pip）</h2>
-<ul>
-<li>Pythonの追加機能（ライブラリ）は「pip」でインストールします。</li>
-<li>例：</li>
-</ul>
-<pre><code class="language-bash">pip install requests
+<p>Pythonのライブラリを追加する際に「pip」を使用します。</p>
+<h3 id="pip">pipコマンドの例</h3>
+<pre><code class="language-bash"># requestsライブラリをインストール
+pip install requests
+
+# インストール済みパッケージ一覧表示
 pip list
+
+# 依存関係をファイルに出力
 pip freeze &gt; requirements.txt
+
+# ファイルからパッケージを一括インストール
 pip install -r requirements.txt
 </code></pre>
 <hr />
-<h2 id="5-qa">5. よくあるトラブルQ&amp;A</h2>
+<h2 id="5-qa">5. よくあるトラブルQ\&amp;A</h2>
 <ul>
-<li><strong>pythonコマンドが見つからない</strong> → インストールやPATH設定を再確認</li>
-<li><strong>pipが使えない</strong> → <code>python -m ensurepip --upgrade</code> で復旧できる場合あり</li>
-<li><strong>仮想環境が有効化できない</strong> → コマンドのスペルやパスを再確認</li>
-<li><strong>日本語が文字化けする</strong> → ファイル保存時の文字コードをUTF-8に</li>
+<li>
+<p><strong><code>python</code>コマンドが見つからない</strong></p>
+</li>
+<li>
+<p>インストール時のPATH設定を再確認してください。</p>
+</li>
+<li>
+<p><strong><code>pip</code>が使えない</strong></p>
+</li>
+<li>
+<p>コマンドプロンプトまたはターミナルで次のコマンドを実行します。</p>
+</li>
+</ul>
+<pre><code class="language-bash">python -m ensurepip --upgrade
+</code></pre>
+<ul>
+<li>
+<p><strong>仮想環境が有効化できない</strong></p>
+</li>
+<li>
+<p>コマンドのパスやスペルを再確認してください。</p>
+</li>
+<li>
+<p><strong>日本語が文字化けする</strong></p>
+</li>
+<li>
+<p>ファイルをUTF-8で保存し直してください。</p>
+</li>
 </ul>
 <hr />
 <blockquote>
-<p>分からないことは「エラー文をコピペして検索」も有効です。焦らず一歩ずつ進めましょう！ </p>
+<p>分からないことは「エラー文をコピペして検索」も有効です。焦らず一歩ずつ進めましょう！</p>
 </blockquote>
 
 
