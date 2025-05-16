@@ -121,7 +121,7 @@ python favorite_foods.py
 
 ---
 
-## よくある間違い・Q\&A
+## よくある間違い・Q&A
 
 ### 無限ループに注意
 
