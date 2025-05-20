@@ -48,11 +48,12 @@ nav:
       - FastAPI概要: fastapi_intro.md
       - API開発: fastapi_api.md
       - APIドキュメントの自動生成: fastapi_api-document.md
+      - HTTPリクエスト: python_basic_http-requests.md
   - Flask入門:
       - Flask概要: flask_intro.md
       - Flask API開発: flask_api.md
       - DB連携: flask_db.md
       - エラーハンドリング: flask_error.md
-  - まとめと: summary.md
+  - まとめ: summary.md
   - 追加課題: challenge.md
   - 付録: appendix.md 
