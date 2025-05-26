@@ -1,0 +1,2574 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="COBOL経験者向けPython & Flaskトレーニング教材">
+      
+      
+        <meta name="author" content="トレーニング運営">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Python & Flask トレーニング - Python & Flask トレーニング</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans JP";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-flask" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Python &amp; Flask トレーニング" class="md-header__button md-logo" aria-label="Python & Flask トレーニング" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python & Flask トレーニング
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python &amp; Flask トレーニング
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="light-blue"  aria-label="ダークモード"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="ダークモード" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="light-blue"  aria-label="ライトモード"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ライトモード" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  はじめに
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../python_intro/" class="md-tabs__link">
+          
+  
+  
+  Python基礎
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fastapi_intro/" class="md-tabs__link">
+          
+  
+  
+  FastAPI入門
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../watsonx/watsonx_intro/" class="md-tabs__link">
+          
+  
+  
+  Watson X Orchestrate
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../flask_intro/" class="md-tabs__link">
+          
+  
+  
+  Flask入門
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../summary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  まとめ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../challenge/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  追加課題
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../appendix/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  付録
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python &amp; Flask トレーニング" class="md-nav__button md-logo" aria-label="Python & Flask トレーニング" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python & Flask トレーニング
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python基礎
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python基礎
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pythonとは
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    環境セットアップ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    変数と型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_if/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    条件分岐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ループ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_func/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_collection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    コレクション（リスト・辞書・セット）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ファイル操作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    エラー処理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FastAPI入門
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            FastAPI入門
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fastapi_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FastAPI概要
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fastapi_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API開発
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fastapi_api-document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    APIドキュメントの自動生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_http-requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTPリクエスト
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Watson X Orchestrate
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Watson X Orchestrate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watsonx/watsonx_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Watson Xとは
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watsonx/watsonx_ai_basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI・生成AIの基礎
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watsonx/watsonx_prompt_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    プロンプトエンジニアリング
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watsonx/watsonx_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    環境構築
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watsonx/watsonx_first_agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめてのエージェント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watsonx/watsonx_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ツール開発
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watsonx/watsonx_collaboration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    エージェント連携
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watsonx/watsonx_practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    実践演習
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watsonx/watsonx_adk_to_wxo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADKからWXOへのデプロイ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watsonx/watsonx_homework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    課題演習
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../watsonx/watsonx_challenge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    チャレンジ課題
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Flask入門
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Flask入門
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flask概要
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flask API開発
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DB連携
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    エラーハンドリング
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    まとめ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../challenge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    追加課題
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    付録
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      第1章: はじめに
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第1章: はじめに">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 トレーニングの目的
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Pythonの位置づけと特徴
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 学習の進め方
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      第2章: Pythonとは？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第2章: Pythonとは？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Pythonの哲学
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Pythonの主な特徴
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 なぜPythonを使うのか？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Pythonの用途
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      第3章: Python環境のセットアップ（ハンズオン）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第3章: Python環境のセットアップ（ハンズオン）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Pythonのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 仮想環境の作成と活用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 基本的なパッケージ管理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      第4章: Python基本文法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第4章: Python基本文法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 変数と型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 条件分岐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 ループ（繰り返し）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 関数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 リストと辞書
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 リストと辞書">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      リスト
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      タプル（不変リスト）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      辞書
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      セット（重複なしコレクション）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 エラー処理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 ファイル操作
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-flaskapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      第5章: FlaskによるAPI開発
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第5章: FlaskによるAPI開発">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Flaskとは？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 なぜFlaskを使うのか？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-flaskapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Flask基本APIの作成（ハンズオン）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Flask基本APIの作成（ハンズオン）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      環境準備:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      最小限のFlaskアプリ:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSONを返すAPIの例:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 リクエストデータの処理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 APIの実行とテスト
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-sqlite" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 データベース連携（SQLite）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7 エラーハンドリング
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      第6章: まとめと発展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第6章: まとめと発展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 学習のまとめ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 次のステップ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 おすすめの参考資料
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      第7章: 追加課題（挑戦）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第7章: 追加課題（挑戦）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 実践的なAPIサーバー構築
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 発展的な課題
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      付録
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="付録">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. 便利なツールとライブラリ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. よくあるエラーとデバッグ方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Pythonコーディング規約
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="python-flask">Python &amp; Flask トレーニング</h1>
+<h2 id="1">第1章: はじめに</h2>
+<h3 id="11">1.1 トレーニングの目的</h3>
+<p>本トレーニングの目的は、COBOLなどの経験を持つエンジニアが、Pythonの基本的な文法やテクニックを習得し、Flaskを使ったAPI開発を実践できるようになることです。3時間のセッションを通じて、以下を学びます：</p>
+<ul>
+<li>Pythonの基礎知識と環境構築</li>
+<li>基本的なプログラミング構造と文法</li>
+<li>FlaskフレームワークでのWeb API開発</li>
+<li>実践的なハンズオン演習</li>
+</ul>
+<h3 id="12-python">1.2 Pythonの位置づけと特徴</h3>
+<p>Pythonは汎用性が高く、Web開発からデータ分析、機械学習、AIまで幅広く活用されているプログラミング言語です。特にWeb API開発においては、シンプルで強力なフレームワークであるFlaskやDjangoがよく使われています。</p>
+<p>Pythonは近年のプログラミング言語人気ランキングで常に上位に位置し、多くのエンジニアに選ばれています。</p>
+<h3 id="13">1.3 学習の進め方</h3>
+<p>このトレーニングでは、講義とハンズオンを交互に行いながら進めていきます。各セクションの後に練習問題を解くことで理解を深めていきましょう。質問はいつでも歓迎します。</p>
+<h2 id="2-python">第2章: Pythonとは？</h2>
+<h3 id="21-python">2.1 Pythonの哲学</h3>
+<p>Pythonは、読みやすさと生産性を重視した、シンプルで明確なプログラミング言語です。</p>
+<pre><code class="language-python">import this  # Pythonの哲学を表示
+</code></pre>
+<p>実行すると「The Zen of Python」が表示され、その中には「読みやすさが大事」「シンプルさが複雑さに勝る」といった考え方が含まれています。</p>
+<h3 id="22-python">2.2 Pythonの主な特徴</h3>
+<ul>
+<li><strong>読みやすいシンタックス</strong>: インデントによる構造定義</li>
+<li><strong>動的型付け</strong>: 変数の型を事前に宣言する必要がない</li>
+<li><strong>インタープリタ言語</strong>: コンパイル不要で実行可能</li>
+<li><strong>マルチパラダイム</strong>: 手続き型、オブジェクト指向型、関数型など様々なスタイルに対応</li>
+<li><strong>豊富なライブラリ</strong>: 標準ライブラリとサードパーティライブラリ</li>
+</ul>
+<h3 id="23-python">2.3 なぜPythonを使うのか？</h3>
+<ul>
+<li><strong>読みやすく、保守性が高い</strong>: 明快な構文で、他の開発者が読みやすいコードを書ける</li>
+<li><strong>生産性</strong>: 少ないコード行数で多くの処理を実現可能</li>
+<li><strong>多用途</strong>: Web開発、データ分析、AI、自動化など様々な分野で活用可能</li>
+<li><strong>コミュニティが活発</strong>: 豊富なライブラリと情報源</li>
+<li><strong>企業での採用増加</strong>: 多くの企業がPythonを採用し、需要が高まっている</li>
+</ul>
+<h3 id="24-python">2.4 Pythonの用途</h3>
+<ul>
+<li>Webアプリケーション開発</li>
+<li>データ分析・可視化</li>
+<li>機械学習・AI</li>
+<li>自動化スクリプト</li>
+<li>ゲーム開発</li>
+<li>IoTデバイスプログラミング</li>
+</ul>
+<h2 id="3-python">第3章: Python環境のセットアップ（ハンズオン）</h2>
+<h3 id="31-python">3.1 Pythonのインストール</h3>
+<pre><code class="language-bash"># Python 3.11をインストール
+pyenv install 3.11.0
+
+# インストール済みのPythonバージョンを確認
+pyenv versions
+</code></pre>
+<h3 id="32">3.2 仮想環境の作成と活用</h3>
+<p>仮想環境はプロジェクト毎に異なるバージョンのパッケージを管理するために重要です。</p>
+<pre><code class="language-bash"># 仮想環境を作成
+pyenv virtualenv 3.11.0 flask-training
+
+# 仮想環境を有効化
+pyenv activate flask-training
+
+# 現在の環境を確認
+python --version
+pip --version
+</code></pre>
+<h3 id="33">3.3 基本的なパッケージ管理</h3>
+<pre><code class="language-bash"># pipの更新
+pip install --upgrade pip
+
+# パッケージのインストール
+pip install requests
+
+# インストール済みパッケージの確認
+pip list
+
+# 必要なパッケージをファイルに出力
+pip freeze &gt; requirements.txt
+
+# requirementsファイルからインストール
+pip install -r requirements.txt
+</code></pre>
+<h2 id="4-python">第4章: Python基本文法</h2>
+<h3 id="41">4.1 変数と型</h3>
+<p>Pythonは動的型付け言語で、変数の型を自動で判断します。</p>
+<pre><code class="language-python"># 基本的な型
+num = 10        # 整数 (int)
+pi = 3.14       # 浮動小数点数 (float)
+text = &quot;Hello&quot;  # 文字列 (str)
+is_active = True  # 真偽値 (bool)
+nothing = None  # None型
+
+# 型の確認
+print(type(num))      # &lt;class 'int'&gt;
+print(type(pi))       # &lt;class 'float'&gt;
+print(type(text))     # &lt;class 'str'&gt;
+print(type(is_active))  # &lt;class 'bool'&gt;
+</code></pre>
+<p><strong>型変換（キャスト）</strong></p>
+<pre><code class="language-python"># 文字列から数値へ
+num_str = &quot;42&quot;
+num_int = int(num_str)
+num_float = float(num_str)
+
+# 数値から文字列へ
+back_to_str = str(num_int)
+</code></pre>
+<p><strong>文字列操作</strong></p>
+<pre><code class="language-python"># 文字列連結
+greeting = &quot;Hello&quot;
+name = &quot;Python&quot;
+message = greeting + &quot;, &quot; + name + &quot;!&quot;  # &quot;Hello, Python!&quot;
+
+# f-strings（Python 3.6以降）
+message = f&quot;{greeting}, {name}!&quot;  # &quot;Hello, Python!&quot;
+
+# 文字列メソッド
+print(&quot;python&quot;.upper())  # &quot;PYTHON&quot;
+print(&quot;PYTHON&quot;.lower())  # &quot;python&quot;
+print(&quot;  python  &quot;.strip())  # &quot;python&quot;
+print(&quot;python&quot;.replace(&quot;p&quot;, &quot;j&quot;))  # &quot;jython&quot;
+</code></pre>
+<p><strong>練習問題:</strong>
+* 名前と年齢を変数に入れて、自己紹介文を作成し表示するプログラムを作成してください。
+   * 例：「私の名前は〇〇で、年齢は〇〇歳です。」
+* 小数点を含む数値を入力として受け取り、整数部分と小数部分を別々に表示するプログラムを作成してください。</p>
+<h3 id="42">4.2 条件分岐</h3>
+<p>条件に応じて処理を変更します。</p>
+<pre><code class="language-python">age = 20
+if age &gt;= 18:
+    print(&quot;成人&quot;)
+else:
+    print(&quot;未成年&quot;)
+
+# 複数条件
+score = 85
+if score &gt;= 90:
+    grade = &quot;A&quot;
+elif score &gt;= 80:
+    grade = &quot;B&quot;
+elif score &gt;= 70:
+    grade = &quot;C&quot;
+else:
+    grade = &quot;D&quot;
+print(f&quot;あなたの成績は{grade}です&quot;)
+
+# 論理演算子
+is_student = True
+has_id = True
+if is_student and has_id:
+    print(&quot;学生割引が適用されます&quot;)
+
+# 三項演算子
+status = &quot;成人&quot; if age &gt;= 18 else &quot;未成年&quot;
+</code></pre>
+<p><strong>練習問題:</strong>
+* ユーザーが入力した数値を受け取り、偶数か奇数かを判定し、結果を表示するプログラムを作成してください。
+* 年齢と性別を入力として受け取り、以下の条件で出力するプログラムを作成してください。
+  * 男性で20歳以上: "男性成人"
+  * 女性で20歳以上: "女性成人"
+  * 20歳未満: "未成年"</p>
+<h3 id="43">4.3 ループ（繰り返し）</h3>
+<p>処理を繰り返し行います。</p>
+<pre><code class="language-python"># for ループ
+for i in range(5):  # 0, 1, 2, 3, 4
+    print(i)
+
+# リストでのループ
+fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]
+for fruit in fruits:
+    print(fruit)
+
+# 辞書でのループ
+person = {&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 25}
+for key in person:
+    print(f&quot;{key}: {person[key]}&quot;)
+
+# key, valueのループ
+for key, value in person.items():
+    print(f&quot;{key}: {value}&quot;)
+
+# while ループ
+count = 0
+while count &lt; 5:
+    print(count)
+    count += 1
+
+# break と continue
+for i in range(10):
+    if i == 3:
+        continue  # このイテレーションをスキップ
+    if i == 7:
+        break  # ループを抜ける
+    print(i)
+</code></pre>
+<p><strong>練習問題:</strong>
+* 1から100までの数値のうち、偶数の合計を計算して表示するプログラムを作成してください。
+* FizzBuzzプログラムを作成してください。1から30までの数値をループし、以下のルールで出力します。
+  * 3の倍数: "Fizz"
+  * 5の倍数: "Buzz"
+  * 3と5の両方の倍数: "FizzBuzz"
+  * それ以外: 数値そのもの</p>
+<h3 id="44">4.4 関数</h3>
+<p>再利用可能なコードのブロックです。</p>
+<pre><code class="language-python"># 基本的な関数
+def greet(name):
+    &quot;&quot;&quot;挨拶を返す関数&quot;&quot;&quot;
+    return f&quot;Hello, {name}!&quot;
+
+print(greet(&quot;Alice&quot;))  # &quot;Hello, Alice!&quot;
+
+# デフォルト引数
+def greet_with_time(name, time=&quot;morning&quot;):
+    return f&quot;Good {time}, {name}!&quot;
+
+print(greet_with_time(&quot;Bob&quot;))  # &quot;Good morning, Bob!&quot;
+print(greet_with_time(&quot;Carol&quot;, &quot;evening&quot;))  # &quot;Good evening, Carol!&quot;
+
+# 可変長引数
+def sum_all(*numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+print(sum_all(1, 2, 3, 4, 5))  # 15
+
+# キーワード引数
+def build_profile(first_name, last_name, **user_info):
+    profile = {
+        'first_name': first_name,
+        'last_name': last_name
+    }
+    profile.update(user_info)
+    return profile
+
+user = build_profile('Albert', 'Einstein',
+                    location='Princeton',
+                    field='Physics')
+print(user)
+</code></pre>
+<p><strong>練習問題:</strong>
+* 複数の数値をリストで受け取り、最大値と最小値を返す関数を作成してください。
+* 摂氏から華氏、および華氏から摂氏に変換する2つの関数を作成し、ユーザーの入力に応じて適切な変換を行うプログラムを作成してください。
+  * 摂氏から華氏: F = C × 9/5 + 32
+  * 華氏から摂氏: C = (F - 32) × 5/9</p>
+<h3 id="45">4.5 リストと辞書</h3>
+<p>複数のデータを効率的に管理します。</p>
+<h4 id="_1">リスト</h4>
+<pre><code class="language-python"># リストの作成
+fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]
+
+# 要素へのアクセス
+print(fruits[0])  # &quot;apple&quot;
+
+# リストの操作
+fruits.append(&quot;orange&quot;)  # 追加
+fruits.insert(1, &quot;blueberry&quot;)  # 挿入
+fruits.remove(&quot;banana&quot;)  # 削除
+popped = fruits.pop()  # 最後の要素を取り出し
+print(popped)  # &quot;orange&quot;
+
+# リストのスライス
+numbers = [0, 1, 2, 3, 4, 5]
+print(numbers[1:4])  # [1, 2, 3]
+print(numbers[:3])   # [0, 1, 2]
+print(numbers[3:])   # [3, 4, 5]
+print(numbers[::2])  # [0, 2, 4] - 2ステップごと
+
+# リスト内包表記
+squares = [x**2 for x in range(10)]
+print(squares)  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+even_squares = [x**2 for x in range(10) if x % 2 == 0]
+print(even_squares)  # [0, 4, 16, 36, 64]
+</code></pre>
+<h4 id="_2">タプル（不変リスト）</h4>
+<pre><code class="language-python"># タプルの作成
+dimensions = (200, 50, 100)
+
+# 要素へのアクセス
+print(dimensions[0])  # 200
+
+# タプルは変更不可
+# dimensions[0] = 250  # エラー
+</code></pre>
+<h4 id="_3">辞書</h4>
+<pre><code class="language-python"># 辞書の作成
+person = {&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 25, &quot;city&quot;: &quot;Tokyo&quot;}
+
+# 要素へのアクセス
+print(person[&quot;name&quot;])  # &quot;Alice&quot;
+
+# 辞書の操作
+person[&quot;email&quot;] = &quot;alice@example.com&quot;  # 追加
+person[&quot;age&quot;] = 26  # 更新
+del person[&quot;city&quot;]  # 削除
+
+# キーの存在確認
+if &quot;name&quot; in person:
+    print(&quot;Name exists!&quot;)
+
+# get メソッド（キーがない場合のデフォルト値を指定）
+phone = person.get(&quot;phone&quot;, &quot;未登録&quot;)
+print(phone)  # &quot;未登録&quot;
+
+# 辞書内包表記
+squares_dict = {x: x**2 for x in range(5)}
+print(squares_dict)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+</code></pre>
+<h4 id="_4">セット（重複なしコレクション）</h4>
+<pre><code class="language-python"># セットの作成
+fruits_set = {&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;apple&quot;}
+print(fruits_set)  # 重複は自動的に除去される
+
+# セットの操作
+fruits_set.add(&quot;orange&quot;)
+fruits_set.remove(&quot;banana&quot;)
+
+# セットの演算
+set_a = {1, 2, 3, 4, 5}
+set_b = {4, 5, 6, 7, 8}
+print(set_a.union(set_b))        # 和集合: {1, 2, 3, 4, 5, 6, 7, 8}
+print(set_a.intersection(set_b))  # 積集合: {4, 5}
+print(set_a.difference(set_b))   # 差集合: {1, 2, 3}
+</code></pre>
+<p><strong>練習問題:</strong>
+* 辞書型を使い、自分のプロフィールを作成して、全ての項目を表示するプログラムを作成してください。
+* 与えられた文字列内の単語の出現回数をカウントし、辞書として返す関数を作成してください。例えば "hello world hello" という入力に対して {"hello": 2, "world": 1} という辞書を返します。</p>
+<h3 id="46">4.6 エラー処理</h3>
+<pre><code class="language-python"># 基本的な例外処理
+try:
+    number = int(input(&quot;数字を入力してください: &quot;))
+    result = 10 / number
+    print(f&quot;結果: {result}&quot;)
+except ValueError:
+    print(&quot;有効な数字を入力してください&quot;)
+except ZeroDivisionError:
+    print(&quot;0で割ることはできません&quot;)
+except Exception as e:
+    print(f&quot;予期せぬエラー: {e}&quot;)
+else:
+    print(&quot;エラーなく処理が完了しました&quot;)
+finally:
+    print(&quot;処理を終了します&quot;)
+</code></pre>
+<p><strong>練習問題:</strong>
+* ユーザーに２つの数値を入力してもらい、割り算を行うプログラムを作成してください。ゼロ除算や数値以外の入力に対してエラー処理を実装してください。</p>
+<h3 id="47">4.7 ファイル操作</h3>
+<pre><code class="language-python"># ファイルの書き込み
+with open('sample.txt', 'w', encoding='utf-8') as file:
+    file.write('Pythonでファイル操作\n')
+    file.write('2行目のテキスト\n')
+
+# ファイルの読み込み
+with open('sample.txt', 'r', encoding='utf-8') as file:
+    content = file.read()
+    print(content)
+
+# 1行ずつ読み込み
+with open('sample.txt', 'r', encoding='utf-8') as file:
+    for line in file:
+        print(line.strip())  # 末尾の改行を除去
+</code></pre>
+<p><strong>練習問題:</strong>
+* ユーザーが入力したテキストをファイルに追記し、その後ファイルの全内容を表示するプログラムを作成してください。</p>
+<h2 id="5-flaskapi">第5章: FlaskによるAPI開発</h2>
+<h3 id="51-flask">5.1 Flaskとは？</h3>
+<p>Flaskは、Pythonの軽量なWebフレームワークです。「マイクロフレームワーク」と呼ばれ、最小限の機能を備えながら、必要に応じて拡張していくことができます。小規模なアプリケーションやAPI開発、プロトタイピングに最適です。</p>
+<h3 id="52-flask">5.2 なぜFlaskを使うのか？</h3>
+<ul>
+<li><strong>シンプルで習得が容易</strong>: 少ないコードで動くWebアプリケーションを作成可能</li>
+<li><strong>柔軟性</strong>: 最小限のコア機能に、必要な機能だけを追加可能</li>
+<li><strong>拡張性</strong>: 多くのFlask拡張機能が利用可能</li>
+<li><strong>Pythonの強み</strong>: データ処理やAIなどPythonの強みとの連携が容易</li>
+</ul>
+<h3 id="53-flaskapi">5.3 Flask基本APIの作成（ハンズオン）</h3>
+<h4 id="_5">環境準備:</h4>
+<pre><code class="language-bash"># Flaskをインストール
+pip install flask
+
+# プロジェクトディレクトリを作成
+mkdir flask-api
+cd flask-api
+</code></pre>
+<h4 id="flask">最小限のFlaskアプリ:</h4>
+<pre><code class="language-python"># app.py
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return 'Hello, Flask!'
+
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+<h4 id="jsonapi">JSONを返すAPIの例:</h4>
+<pre><code class="language-python"># app.py
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route('/hello', methods=['GET'])
+def hello_world():
+    return jsonify({'message': 'Hello, World!'})
+
+@app.route('/users/&lt;username&gt;', methods=['GET'])
+def get_user(username):
+    # 実際はデータベースから取得するケースが多い
+    return jsonify({
+        'username': username,
+        'email': f'{username}@example.com'
+    })
+
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+<h3 id="54">5.4 リクエストデータの処理</h3>
+<pre><code class="language-python"># app.py
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+@app.route('/echo', methods=['POST'])
+def echo():
+    # JSONリクエストボディを取得
+    data = request.json
+    return jsonify(data)
+
+@app.route('/search', methods=['GET'])
+def search():
+    # クエリパラメータを取得
+    query = request.args.get('q', '')
+    return jsonify({
+        'query': query,
+        'results': [f'Result for {query} - 1', f'Result for {query} - 2']
+    })
+
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+<h3 id="55-api">5.5 APIの実行とテスト</h3>
+<p>Flaskアプリケーションを起動します。</p>
+<pre><code class="language-bash">python app.py
+</code></pre>
+<p>ブラウザまたはAPIクライアント（curl, Postman, HTTPieなど）で以下のURLにアクセスして結果を確認してください。</p>
+<ul>
+<li><code>http://127.0.0.1:5000/hello</code> - Hello World JSONレスポンスを取得</li>
+<li><code>http://127.0.0.1:5000/users/alice</code> - ユーザー情報を取得</li>
+<li><code>http://127.0.0.1:5000/search?q=python</code> - 検索クエリを送信</li>
+</ul>
+<p>POSTリクエストの送信例（curl使用）:</p>
+<pre><code class="language-bash">curl -X POST -H &quot;Content-Type: application/json&quot; -d '{&quot;name&quot;:&quot;John&quot;,&quot;age&quot;:30}' http://127.0.0.1:5000/echo
+</code></pre>
+<h3 id="56-sqlite">5.6 データベース連携（SQLite）</h3>
+<pre><code class="language-python"># app.py
+import sqlite3
+from flask import Flask, jsonify, request, g
+
+app = Flask(__name__)
+
+# データベース接続を取得
+def get_db():
+    db = getattr(g, '_database', None)
+    if db is None:
+        db = g._database = sqlite3.connect('tasks.db')
+        db.row_factory = sqlite3.Row
+    return db
+
+# アプリケーション終了時にDBをクローズ
+@app.teardown_appcontext
+def close_connection(exception):
+    db = getattr(g, '_database', None)
+    if db is not None:
+        db.close()
+
+# 初期化
+def init_db():
+    with app.app_context():
+        db = get_db()
+        with app.open_resource('schema.sql', mode='r') as f:
+            db.cursor().executescript(f.read())
+        db.commit()
+
+# タスクリスト取得API
+@app.route('/tasks', methods=['GET'])
+def get_tasks():
+    db = get_db()
+    cursor = db.execute('SELECT id, title, done FROM tasks')
+    tasks = [dict(id=row['id'], title=row['title'], done=row['done']) for row in cursor.fetchall()]
+    return jsonify(tasks)
+
+# タスク追加API
+@app.route('/tasks', methods=['POST'])
+def add_task():
+    if not request.json or not 'title' in request.json:
+        return jsonify({'error': 'Title is required'}), 400
+
+    title = request.json['title']
+    db = get_db()
+    cursor = db.execute('INSERT INTO tasks (title, done) VALUES (?, ?)', 
+                        [title, False])
+    db.commit()
+
+    return jsonify({
+        'id': cursor.lastrowid,
+        'title': title,
+        'done': False
+    }), 201
+
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+<p>schema.sqlファイル:</p>
+<pre><code class="language-sql">DROP TABLE IF EXISTS tasks;
+CREATE TABLE tasks (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  done BOOLEAN NOT NULL DEFAULT FALSE
+);
+</code></pre>
+<h3 id="57">5.7 エラーハンドリング</h3>
+<pre><code class="language-python">from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+# カスタムエラーハンドリング
+@app.errorhandler(404)
+def not_found(error):
+    return jsonify({'error': 'Not found'}), 404
+
+@app.errorhandler(400)
+def bad_request(error):
+    return jsonify({'error': 'Bad request'}), 400
+
+@app.errorhandler(500)
+def server_error(error):
+    return jsonify({'error': 'Internal server error'}), 500
+
+@app.route('/divide', methods=['GET'])
+def divide():
+    try:
+        a = int(request.args.get('a', 0))
+        b = int(request.args.get('b', 0))
+        if b == 0:
+            return jsonify({'error': 'Division by zero'}), 400
+        return jsonify({'result': a / b})
+    except ValueError:
+        return jsonify({'error': 'Invalid parameters'}), 400
+
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+<p><strong>練習問題:</strong>
+* <code>/about</code>という新しいエンドポイントを作成し、自分のプロフィールをJSON形式で返すAPIを作成してください。
+* 四則演算（足し算、引き算、掛け算、割り算）を行うAPIエンドポイント<code>/calc</code>を作成し、クエリパラメータで演算子と数値を受け取って結果を返すようにしてください。</p>
+<h2 id="6">第6章: まとめと発展</h2>
+<h3 id="61">6.1 学習のまとめ</h3>
+<p>このトレーニングでは、以下を学びました：</p>
+<ol>
+<li>Pythonの基本と環境構築</li>
+<li>基本的なデータ型とその操作</li>
+<li>条件分岐、ループ、関数などの制御構造</li>
+<li>リスト、辞書などのデータ構造</li>
+<li>Flaskフレームワークの基礎</li>
+<li>Web APIの作成方法</li>
+<li>データベース連携の基本</li>
+</ol>
+<h3 id="62">6.2 次のステップ</h3>
+<p>今後のスキルアップのために以下の学習をお勧めします：</p>
+<ul>
+<li><strong>Python中級・上級トピック</strong>:</li>
+<li>オブジェクト指向プログラミング（クラス、継承等）</li>
+<li>データ処理ライブラリ（pandas, numpy）</li>
+<li>テスト駆動開発（pytest）</li>
+<li>
+<p>非同期処理</p>
+</li>
+<li>
+<p><strong>Flaskの発展</strong>:</p>
+</li>
+<li>Blueprint（モジュール化）</li>
+<li>SQLAlchemyでのORM操作</li>
+<li>Flask-RESTful拡張</li>
+<li>
+<p>認証・認可の実装</p>
+</li>
+<li>
+<p><strong>Webアプリケーション開発</strong>:</p>
+</li>
+<li>フロントエンド連携（JavaScript, React等）</li>
+<li>デプロイメント（Docker、クラウド環境）</li>
+<li>CI/CD</li>
+</ul>
+<h3 id="63">6.3 おすすめの参考資料</h3>
+<ul>
+<li>公式ドキュメント：<a href="https://docs.python.org/ja/3/">Python公式</a>、<a href="https://flask.palletsprojects.com/">Flask公式</a></li>
+<li>オンラインコース：Udemy, Coursera, PluralSightなど</li>
+<li>書籍：『Pythonクラッシュコース』『Flask Web開発』など</li>
+</ul>
+<h2 id="7">第7章: 追加課題（挑戦）</h2>
+<h3 id="71-api">7.1 実践的なAPIサーバー構築</h3>
+<p>以下の機能を持つAPIサーバーを作成してください。</p>
+<ol>
+<li><strong>四則演算APIの作成</strong>:</li>
+<li><code>/calc</code>エンドポイントで、四則演算（足し算、引き算、掛け算、割り算）を行うAPIを作成</li>
+<li>クエリパラメータまたはJSONリクエストで2つの数値と演算子を受け取る</li>
+<li>結果をJSON形式で返す</li>
+<li>
+<p>エラーハンドリング（数値以外の入力、ゼロ除算など）を実装</p>
+</li>
+<li>
+<p><strong>タスク管理API</strong>:</p>
+</li>
+<li>タスクの作成、取得、更新、削除ができるRESTful API</li>
+<li>データはSQLiteに保存</li>
+<li>
+<p>以下のエンドポイントを実装</p>
+<ul>
+<li><code>GET /tasks</code>: タスク一覧取得</li>
+<li><code>GET /tasks/&lt;id&gt;</code>: 指定IDのタスク取得</li>
+<li><code>POST /tasks</code>: 新規タスク作成</li>
+<li><code>PUT /tasks/&lt;id&gt;</code>: タスク更新</li>
+<li><code>DELETE /tasks/&lt;id&gt;</code>: タスク削除</li>
+</ul>
+</li>
+<li>
+<p><strong>ユーザー認証機能</strong>:</p>
+</li>
+<li>シンプルなAPIキー認証の実装</li>
+<li>認証されていないリクエストは拒否する</li>
+<li>ユーザーごとに異なるタスクリストを表示</li>
+</ol>
+<h3 id="72">7.2 発展的な課題</h3>
+<ul>
+<li>RESTful API設計のベストプラクティスに従ってAPIを再設計</li>
+<li>スキーマバリデーションの追加（marshmallow等）</li>
+<li>APIドキュメントの自動生成（Swagger/OpenAPI）</li>
+<li>テスト自動化（pytest）の実装</li>
+<li>Dockerコンテナ化とデプロイ</li>
+</ul>
+<h2 id="_6">付録</h2>
+<h3 id="a">A. 便利なツールとライブラリ</h3>
+<ul>
+<li><strong>開発環境</strong>: PyCharm, VS Code</li>
+<li><strong>パッケージ管理</strong>: pip, pipenv, poetry</li>
+<li><strong>テスト</strong>: pytest, unittest</li>
+<li><strong>Web開発</strong>: Flask, Django</li>
+<li><strong>データ処理</strong>: pandas, numpy</li>
+<li><strong>可視化</strong>: matplotlib, seaborn</li>
+<li><strong>API開発</strong>: Flask-RESTful, FastAPI</li>
+</ul>
+<h3 id="b">B. よくあるエラーとデバッグ方法</h3>
+<ul>
+<li>インデントエラー</li>
+<li>名前エラー（未定義変数）</li>
+<li>型エラー</li>
+<li>インポートエラー</li>
+<li>pdbを使ったデバッグ方法</li>
+<li>ロギングのベストプラクティス</li>
+</ul>
+<h3 id="c-python">C. Pythonコーディング規約</h3>
+<ul>
+<li>PEP 8: Pythonのコーディングスタイルガイド</li>
+<li>コメントと文書化</li>
+<li>命名規則</li>
+<li>コードレイアウト</li>
+<li>リント（linting）ツール</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

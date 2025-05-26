@@ -1,0 +1,46 @@
+/* 以前のカスタムを解除し、デフォルトに戻す */
+h1, h2, .md-typeset h1, .md-typeset h2 {
+  color: inherit !important;
+  border: none !important;
+  padding: 0 !important;
+  background: none !important;
+  border-radius: 0 !important;
+}
+
+/***** ダークモード用 *****/
+[data-md-color-scheme="slate"] html,
+[data-md-color-scheme="slate"] body,
+[data-md-color-scheme="slate"] .md-typeset,
+[data-md-color-scheme="slate"] .md-typeset p,
+[data-md-color-scheme="slate"] .md-typeset li,
+[data-md-color-scheme="slate"] .md-typeset span,
+[data-md-color-scheme="slate"] .md-typeset table,
+[data-md-color-scheme="slate"] .md-typeset code {
+  color: #e3e7ea !important;
+}
+
+/***** ライトモード用 *****/
+[data-md-color-scheme="default"] html,
+[data-md-color-scheme="default"] body,
+[data-md-color-scheme="default"] .md-typeset,
+[data-md-color-scheme="default"] .md-typeset p,
+[data-md-color-scheme="default"] .md-typeset li,
+[data-md-color-scheme="default"] .md-typeset span,
+[data-md-color-scheme="default"] .md-typeset table,
+[data-md-color-scheme="default"] .md-typeset code {
+  color: #222831 !important;
+}
+
+/* 強調用カスタムクラス */
+.highlight {
+  color: #38bdf8 !important;
+  font-weight: bold;
+}
+.important {
+  color: #f59e42 !important;
+  font-weight: bold;
+}
+.note {
+  color: #34d399 !important;
+  font-style: italic;
+} 
