@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../../watsonx/watsonx_challenge/">
+      
+      
+        <link rel="next" href="../flask_api/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Flask入門 - Python & Flask トレーニング</title>
+        <title>Flask概要 - Python & Flask トレーニング</title>
       
     
     
@@ -108,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Flask入門
+              Flask概要
             
           </span>
         </div>
@@ -248,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../fastapi_intro/" class="md-tabs__link">
+        <a href="../../fastapi/fastapi_intro/" class="md-tabs__link">
           
   
   
@@ -284,11 +288,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../flask_intro/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -306,7 +312,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../summary/" class="md-tabs__link">
+      <a href="../../general/summary/" class="md-tabs__link">
         
   
   
@@ -325,7 +331,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../challenge/" class="md-tabs__link">
+      <a href="../../general/challenge/" class="md-tabs__link">
         
   
   
@@ -344,7 +350,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../appendix/" class="md-tabs__link">
+      <a href="../../general/appendix/" class="md-tabs__link">
         
   
   
@@ -506,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_variables/" class="md-nav__link">
+      <a href="../../python/python_basic_variables/" class="md-nav__link">
         
   
   
@@ -529,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_if/" class="md-nav__link">
+      <a href="../../python/python_basic_if/" class="md-nav__link">
         
   
   
@@ -552,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_loop/" class="md-nav__link">
+      <a href="../../python/python_basic_loop/" class="md-nav__link">
         
   
   
@@ -575,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_func/" class="md-nav__link">
+      <a href="../../python/python_basic_func/" class="md-nav__link">
         
   
   
@@ -598,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_collection/" class="md-nav__link">
+      <a href="../../python/python_basic_collection/" class="md-nav__link">
         
   
   
@@ -621,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_file/" class="md-nav__link">
+      <a href="../../python/python_basic_file/" class="md-nav__link">
         
   
   
@@ -644,12 +650,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_error/" class="md-nav__link">
+      <a href="../../python/python_basic_error/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     エラー処理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python_basic_http-requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTPリクエスト
     
   </span>
   
@@ -715,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastapi_intro/" class="md-nav__link">
+      <a href="../../fastapi/fastapi_intro/" class="md-nav__link">
         
   
   
@@ -738,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastapi_api/" class="md-nav__link">
+      <a href="../../fastapi/fastapi_api/" class="md-nav__link">
         
   
   
@@ -761,35 +790,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastapi_api-document/" class="md-nav__link">
+      <a href="../../fastapi/fastapi_api-document/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     APIドキュメントの自動生成
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python_basic_http-requests/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    HTTPリクエスト
     
   </span>
   
@@ -1112,24 +1118,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1142,7 +1153,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Flask入門
@@ -1153,10 +1164,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../flask_intro/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Flask概要
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1167,6 +1200,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flask_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flaskとは？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flaskdjango" class="md-nav__link">
+    <span class="md-ellipsis">
+      FlaskとDjangoの違い
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flask_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flaskのディレクトリ構成例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flask_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      実務でよく使うFlask拡張
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      公式ドキュメント・学習リソース
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1179,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flask_api/" class="md-nav__link">
+      <a href="../flask_api/" class="md-nav__link">
         
   
   
@@ -1202,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flask_db/" class="md-nav__link">
+      <a href="../flask_db/" class="md-nav__link">
         
   
   
@@ -1225,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flask_error/" class="md-nav__link">
+      <a href="../flask_error/" class="md-nav__link">
         
   
   
@@ -1255,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../summary/" class="md-nav__link">
+      <a href="../../general/summary/" class="md-nav__link">
         
   
   
@@ -1277,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../challenge/" class="md-nav__link">
+      <a href="../../general/challenge/" class="md-nav__link">
         
   
   
@@ -1299,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../appendix/" class="md-nav__link">
+      <a href="../../general/appendix/" class="md-nav__link">
         
   
   
@@ -1401,16 +1499,16 @@
 
 
 
-<h1 id="flask">Flask入門</h1>
+<h1 id="flask">Flask入門<a class="headerlink" href="#flask" title="Permanent link">&para;</a></h1>
 <hr />
-<h2 id="flask_1">Flaskとは？</h2>
+<h2 id="flask_1">Flaskとは？<a class="headerlink" href="#flask_1" title="Permanent link">&para;</a></h2>
 <p>Flaskは「シンプルで拡張性が高い」Python製のWebフレームワークです。</p>
 <ul>
 <li>必要最小限の機能だけを持ち、自由にカスタマイズできる</li>
 <li>小規模なAPIから本格的なWebサービスまで幅広く対応</li>
 </ul>
 <hr />
-<h2 id="flaskdjango">FlaskとDjangoの違い</h2>
+<h2 id="flaskdjango">FlaskとDjangoの違い<a class="headerlink" href="#flaskdjango" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1436,32 +1534,30 @@
 <li>Flaskは「自分で組み立てたい人」向け、Djangoは「全部入りで楽したい人」向け</li>
 </ul>
 <hr />
-<h2 id="flask_2">Flaskのディレクトリ構成例</h2>
-<pre><code>myapp/
+<h2 id="flask_2">Flaskのディレクトリ構成例<a class="headerlink" href="#flask_2" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code>myapp/
 ├── app.py
 ├── requirements.txt
 ├── static/
 ├── templates/
 └── ...
-</code></pre>
-<ul>
-<li><code>app.py</code>：アプリ本体</li>
-<li><code>static/</code>：CSSや画像など静的ファイル</li>
-<li><code>templates/</code>：HTMLテンプレート</li>
-</ul>
+</code></pre></div>
+- <code>app.py</code>：アプリ本体
+- <code>static/</code>：CSSや画像など静的ファイル
+- <code>templates/</code>：HTMLテンプレート</p>
 <hr />
-<h2 id="flask_3">実務でよく使うFlask拡張</h2>
+<h2 id="flask_3">実務でよく使うFlask拡張<a class="headerlink" href="#flask_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Flask-RESTful</strong>：API開発を楽にする</li>
 <li><strong>Flask-Login</strong>：ログイン認証を簡単に</li>
 <li><strong>Flask-Migrate</strong>：DBマイグレーション管理</li>
 <li><strong>Flask-CORS</strong>：他ドメインからのAPIアクセス許可</li>
 </ul>
-<p>インストール例：</p>
-<pre><code class="language-bash">pip install flask-restful flask-login flask-migrate flask-cors
-</code></pre>
+<p>インストール例：
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>flask-restful<span class="w"> </span>flask-login<span class="w"> </span>flask-migrate<span class="w"> </span>flask-cors
+</code></pre></div></p>
 <hr />
-<h2 id="_1">公式ドキュメント・学習リソース</h2>
+<h2 id="_1">公式ドキュメント・学習リソース<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://flask.palletsprojects.com/ja/latest/">Flask公式</a></li>
 <li><a href="https://flask-restful.readthedocs.io/ja/latest/">Flask-RESTful公式</a></li>

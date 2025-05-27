@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../flask_api/">
+      
+      
+        <link rel="next" href="../flask_error/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>DB連携（SQLite & SQLAlchemy） - Python & Flask トレーニング</title>
+        <title>DB連携 - Python & Flask トレーニング</title>
       
     
     
@@ -108,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DB連携（SQLite &amp; SQLAlchemy）
+              DB連携
             
           </span>
         </div>
@@ -248,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../fastapi_intro/" class="md-tabs__link">
+        <a href="../../fastapi/fastapi_intro/" class="md-tabs__link">
           
   
   
@@ -284,11 +288,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../flask_intro/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../flask_intro/" class="md-tabs__link">
           
   
   
@@ -306,7 +312,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../summary/" class="md-tabs__link">
+      <a href="../../general/summary/" class="md-tabs__link">
         
   
   
@@ -325,7 +331,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../challenge/" class="md-tabs__link">
+      <a href="../../general/challenge/" class="md-tabs__link">
         
   
   
@@ -344,7 +350,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../appendix/" class="md-tabs__link">
+      <a href="../../general/appendix/" class="md-tabs__link">
         
   
   
@@ -506,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_variables/" class="md-nav__link">
+      <a href="../../python/python_basic_variables/" class="md-nav__link">
         
   
   
@@ -529,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_if/" class="md-nav__link">
+      <a href="../../python/python_basic_if/" class="md-nav__link">
         
   
   
@@ -552,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_loop/" class="md-nav__link">
+      <a href="../../python/python_basic_loop/" class="md-nav__link">
         
   
   
@@ -575,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_func/" class="md-nav__link">
+      <a href="../../python/python_basic_func/" class="md-nav__link">
         
   
   
@@ -598,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_collection/" class="md-nav__link">
+      <a href="../../python/python_basic_collection/" class="md-nav__link">
         
   
   
@@ -621,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_file/" class="md-nav__link">
+      <a href="../../python/python_basic_file/" class="md-nav__link">
         
   
   
@@ -644,12 +650,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_error/" class="md-nav__link">
+      <a href="../../python/python_basic_error/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     エラー処理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python_basic_http-requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTPリクエスト
     
   </span>
   
@@ -715,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastapi_intro/" class="md-nav__link">
+      <a href="../../fastapi/fastapi_intro/" class="md-nav__link">
         
   
   
@@ -738,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastapi_api/" class="md-nav__link">
+      <a href="../../fastapi/fastapi_api/" class="md-nav__link">
         
   
   
@@ -761,35 +790,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastapi_api-document/" class="md-nav__link">
+      <a href="../../fastapi/fastapi_api-document/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     APIドキュメントの自動生成
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python_basic_http-requests/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    HTTPリクエスト
     
   </span>
   
@@ -1112,24 +1118,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1142,7 +1153,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Flask入門
@@ -1156,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flask_intro/" class="md-nav__link">
+      <a href="../flask_intro/" class="md-nav__link">
         
   
   
@@ -1179,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flask_api/" class="md-nav__link">
+      <a href="../flask_api/" class="md-nav__link">
         
   
   
@@ -1199,10 +1210,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../flask_db/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    DB連携
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1213,6 +1246,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sqlite" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQLite（標準ライブラリ）での連携例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ormsqlalchemy" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORM（SQLAlchemy）での連携例
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1225,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flask_error/" class="md-nav__link">
+      <a href="../flask_error/" class="md-nav__link">
         
   
   
@@ -1255,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../summary/" class="md-nav__link">
+      <a href="../../general/summary/" class="md-nav__link">
         
   
   
@@ -1277,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../challenge/" class="md-nav__link">
+      <a href="../../general/challenge/" class="md-nav__link">
         
   
   
@@ -1299,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../appendix/" class="md-nav__link">
+      <a href="../../general/appendix/" class="md-nav__link">
         
   
   
@@ -1374,112 +1445,112 @@
 
 
 
-<h1 id="dbsqlite-sqlalchemy">DB連携（SQLite &amp; SQLAlchemy）</h1>
+<h1 id="dbsqlite-sqlalchemy">DB連携（SQLite &amp; SQLAlchemy）<a class="headerlink" href="#dbsqlite-sqlalchemy" title="Permanent link">&para;</a></h1>
 <hr />
-<h2 id="sqlite">SQLite（標準ライブラリ）での連携例</h2>
-<pre><code class="language-python">import sqlite3
-conn = sqlite3.connect('sample.db')
-cursor = conn.cursor()
-cursor.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)')
-cursor.execute('INSERT INTO users (name) VALUES (?)', (&quot;山田&quot;,))
-conn.commit()
-for row in cursor.execute('SELECT * FROM users'):
-    print(row)
-conn.close()
-</code></pre>
+<h2 id="sqlite">SQLite（標準ライブラリ）での連携例<a class="headerlink" href="#sqlite" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;sample.db&#39;</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)&#39;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO users (name) VALUES (?)&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;山田&quot;</span><span class="p">,))</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
 <hr />
-<h2 id="ormsqlalchemy">ORM（SQLAlchemy）での連携例</h2>
+<h2 id="ormsqlalchemy">ORM（SQLAlchemy）での連携例<a class="headerlink" href="#ormsqlalchemy" title="Permanent link">&para;</a></h2>
 <p>SQLAlchemyは「PythonのコードだけでDB操作ができる」便利なライブラリです。</p>
-<pre><code class="language-python">from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">flask_sqlalchemy</span><span class="w"> </span><span class="kn">import</span> <span class="n">SQLAlchemy</span>
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sample.db'
-db = SQLAlchemy(app)
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///sample.db&#39;</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
 
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50))
+<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
 
-with app.app_context():
-    db.create_all()
-    user = User(name=&quot;佐藤&quot;)
-    db.session.add(user)
-    db.session.commit()
-    users = User.query.all()
-    for u in users:
-        print(u.id, u.name)
-</code></pre>
+<span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;佐藤&quot;</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">users</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
 <hr />
 <blockquote>
 <p>ORMを使うと「SQL文を書かずに」DB操作ができ、保守性・安全性もアップします。</p>
 </blockquote>
-<pre><code class="language-python"># app.py
-import sqlite3
-from flask import Flask, jsonify, request, g
+<div class="highlight"><pre><span></span><code><span class="c1"># app.py</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">g</span>
 
-app = Flask(__name__)
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
-# データベース接続を取得
-def get_db():
-    db = getattr(g, '_database', None)
-    if db is None:
-        db = g._database = sqlite3.connect('tasks.db')
-        db.row_factory = sqlite3.Row
-    return db
+<span class="c1"># データベース接続を取得</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_db</span><span class="p">():</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;_database&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">db</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">_database</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;tasks.db&#39;</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">row_factory</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Row</span>
+    <span class="k">return</span> <span class="n">db</span>
 
-# アプリケーション終了時にDBをクローズ
-@app.teardown_appcontext
-def close_connection(exception):
-    db = getattr(g, '_database', None)
-    if db is not None:
-        db.close()
+<span class="c1"># アプリケーション終了時にDBをクローズ</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">teardown_appcontext</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">close_connection</span><span class="p">(</span><span class="n">exception</span><span class="p">):</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;_database&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">db</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-# 初期化
-def init_db():
-    with app.app_context():
-        db = get_db()
-        with app.open_resource('schema.sql', mode='r') as f:
-            db.cursor().executescript(f.read())
-        db.commit()
+<span class="c1"># 初期化</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">init_db</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">()</span>
+        <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">open_resource</span><span class="p">(</span><span class="s1">&#39;schema.sql&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span><span class="o">.</span><span class="n">executescript</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 
-# タスクリスト取得API
-@app.route('/tasks', methods=['GET'])
-def get_tasks():
-    db = get_db()
-    cursor = db.execute('SELECT id, title, done FROM tasks')
-    tasks = [dict(id=row['id'], title=row['title'], done=row['done']) for row in cursor.fetchall()]
-    return jsonify(tasks)
+<span class="c1"># タスクリスト取得API</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/tasks&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_tasks</span><span class="p">():</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">()</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT id, title, done FROM tasks&#39;</span><span class="p">)</span>
+    <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">],</span> <span class="n">done</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;done&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()]</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">tasks</span><span class="p">)</span>
 
-# タスク追加API
-@app.route('/tasks', methods=['POST'])
-def add_task():
-    if not request.json or not 'title' in request.json:
-        return jsonify({'error': 'Title is required'}), 400
+<span class="c1"># タスク追加API</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/tasks&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_task</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span> <span class="ow">or</span> <span class="ow">not</span> <span class="s1">&#39;title&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="s1">&#39;Title is required&#39;</span><span class="p">}),</span> <span class="mi">400</span>
 
-    title = request.json['title']
-    db = get_db()
-    cursor = db.execute('INSERT INTO tasks (title, done) VALUES (?, ?)', 
-                        [title, False])
-    db.commit()
+    <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">()</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO tasks (title, done) VALUES (?, ?)&#39;</span><span class="p">,</span> 
+                        <span class="p">[</span><span class="n">title</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 
-    return jsonify({
-        'id': cursor.lastrowid,
-        'title': title,
-        'done': False
-    }), 201
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">cursor</span><span class="o">.</span><span class="n">lastrowid</span><span class="p">,</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
+        <span class="s1">&#39;done&#39;</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="p">}),</span> <span class="mi">201</span>
 
-if __name__ == '__main__':
-    app.run(debug=True)
-</code></pre>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
 <p>schema.sqlファイル:</p>
-<pre><code class="language-sql">DROP TABLE IF EXISTS tasks;
-CREATE TABLE tasks (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  title TEXT NOT NULL,
-  done BOOLEAN NOT NULL DEFAULT FALSE
-);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">tasks</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">tasks</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTOINCREMENT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">title</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">done</span><span class="w"> </span><span class="nb">BOOLEAN</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">FALSE</span>
+<span class="p">);</span>
+</code></pre></div>
 
 
 

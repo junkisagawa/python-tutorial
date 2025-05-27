@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../../python_env/">
+      
+      
+        <link rel="next" href="../python_basic_if/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -224,10 +228,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../python_intro/" class="md-tabs__link">
           
   
@@ -248,7 +254,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../fastapi_intro/" class="md-tabs__link">
+        <a href="../../fastapi/fastapi_intro/" class="md-tabs__link">
           
   
   
@@ -288,7 +294,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../flask_intro/" class="md-tabs__link">
+        <a href="../../flask/flask_intro/" class="md-tabs__link">
           
   
   
@@ -306,7 +312,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../summary/" class="md-tabs__link">
+      <a href="../../general/summary/" class="md-tabs__link">
         
   
   
@@ -325,7 +331,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../challenge/" class="md-tabs__link">
+      <a href="../../general/challenge/" class="md-tabs__link">
         
   
   
@@ -344,7 +350,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../appendix/" class="md-tabs__link">
+      <a href="../../general/appendix/" class="md-tabs__link">
         
   
   
@@ -416,24 +422,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -446,7 +457,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Python基礎
@@ -503,10 +514,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../python_basic_variables/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    変数と型
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -517,6 +550,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      変数とは？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="変数とは？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cobolpython" class="md-nav__link">
+    <span class="md-ellipsis">
+      COBOLとPythonの変数の違い
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      型（データの種類）とは？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      型の自動判別（動的型付け）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      型の確認方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      よくある間違いとQ&amp;A
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -529,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_if/" class="md-nav__link">
+      <a href="../python_basic_if/" class="md-nav__link">
         
   
   
@@ -552,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_loop/" class="md-nav__link">
+      <a href="../python_basic_loop/" class="md-nav__link">
         
   
   
@@ -575,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_func/" class="md-nav__link">
+      <a href="../python_basic_func/" class="md-nav__link">
         
   
   
@@ -598,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_collection/" class="md-nav__link">
+      <a href="../python_basic_collection/" class="md-nav__link">
         
   
   
@@ -621,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_file/" class="md-nav__link">
+      <a href="../python_basic_file/" class="md-nav__link">
         
   
   
@@ -644,12 +757,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python_basic_error/" class="md-nav__link">
+      <a href="../python_basic_error/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     エラー処理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python_basic_http-requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTPリクエスト
     
   </span>
   
@@ -715,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastapi_intro/" class="md-nav__link">
+      <a href="../../fastapi/fastapi_intro/" class="md-nav__link">
         
   
   
@@ -738,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastapi_api/" class="md-nav__link">
+      <a href="../../fastapi/fastapi_api/" class="md-nav__link">
         
   
   
@@ -761,35 +897,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastapi_api-document/" class="md-nav__link">
+      <a href="../../fastapi/fastapi_api-document/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     APIドキュメントの自動生成
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python_basic_http-requests/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    HTTPリクエスト
     
   </span>
   
@@ -1156,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flask_intro/" class="md-nav__link">
+      <a href="../../flask/flask_intro/" class="md-nav__link">
         
   
   
@@ -1179,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flask_api/" class="md-nav__link">
+      <a href="../../flask/flask_api/" class="md-nav__link">
         
   
   
@@ -1202,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flask_db/" class="md-nav__link">
+      <a href="../../flask/flask_db/" class="md-nav__link">
         
   
   
@@ -1225,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flask_error/" class="md-nav__link">
+      <a href="../../flask/flask_error/" class="md-nav__link">
         
   
   
@@ -1255,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../summary/" class="md-nav__link">
+      <a href="../../general/summary/" class="md-nav__link">
         
   
   
@@ -1277,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../challenge/" class="md-nav__link">
+      <a href="../../general/challenge/" class="md-nav__link">
         
   
   
@@ -1299,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../appendix/" class="md-nav__link">
+      <a href="../../general/appendix/" class="md-nav__link">
         
   
   
@@ -1416,14 +1529,16 @@
 
 
 
-<h1 id="_1">変数と型</h1>
+<h1 id="_1">変数と型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>変数と型はPythonプログラミングの基礎です。このページでは「変数とは何か」「型とは何か」について詳しく解説します。</p>
-<p>!!! info "COBOLプログラマーの皆様へ"
-    COBOLのDATA DIVISIONで宣言する変数とPythonの変数には大きな違いがあります。このページでは、COBOLとの違いを交えながらPythonの変数を説明します。</p>
+<div class="admonition info">
+<p class="admonition-title">COBOLプログラマーの皆様へ</p>
+<p>COBOLのDATA DIVISIONで宣言する変数とPythonの変数には大きな違いがあります。このページでは、COBOLとの違いを交えながらPythonの変数を説明します。</p>
+</div>
 <hr />
-<h2 id="_2">変数とは？</h2>
+<h2 id="_2">変数とは？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>変数とは、「データ（値）に名前をつけて保存する箱」のようなものです。</p>
-<h3 id="cobolpython">COBOLとPythonの変数の違い</h3>
+<h3 id="cobolpython">COBOLとPythonの変数の違い<a class="headerlink" href="#cobolpython" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1455,21 +1570,21 @@
 </tr>
 </tbody>
 </table>
-<p><strong>COBOLの例：</strong></p>
-<pre><code class="language-cobol">01 WS-NAME    PIC X(10).
-01 WS-AGE     PIC 9(3).
+<p><strong>COBOLの例：</strong>
+<div class="highlight"><pre><span></span><code><span class="c">01 WS-</span><span class="nv">NAME</span><span class="w">    </span><span class="kt">PIC X(10)</span><span class="p">.</span>
+<span class="c">01 WS-</span><span class="nv">AGE</span><span class="w">     </span><span class="kt">PIC 9(3)</span><span class="p">.</span>
 
-MOVE &quot;たろう&quot; TO WS-NAME.
-MOVE 25 TO WS-AGE.
-</code></pre>
-<p><strong>Pythonの例：</strong></p>
-<pre><code class="language-python">name = &quot;たろう&quot;  # 文字列型として自動認識
-age = 25        # 整数型として自動認識
-</code></pre>
+<span class="c">MOVE &quot;</span><span class="err">たろう</span><span class="s2">&quot; TO WS-NAME.</span>
+<span class="c">MOVE 2</span><span class="mi">5 </span><span class="kp">TO</span><span class="w"> </span><span class="nv">WS-AGE</span><span class="p">.</span>
+</code></pre></div></p>
+<p><strong>Pythonの例：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;たろう&quot;</span>  <span class="c1"># 文字列型として自動認識</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>        <span class="c1"># 整数型として自動認識</span>
+</code></pre></div></p>
 <p>具体的な例を見てみましょう。</p>
-<pre><code class="language-python">name = &quot;たろう&quot;
-age = 25
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;たろう&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+</code></pre></div>
 <p>このコードでは、</p>
 <ul>
 <li><code>name</code> という変数に文字列「たろう」を保存しています。</li>
@@ -1477,7 +1592,7 @@ age = 25
 </ul>
 <p>変数に値を保存することを「代入」と呼びます。</p>
 <hr />
-<h2 id="_3">型（データの種類）とは？</h2>
+<h2 id="_3">型（データの種類）とは？<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Pythonにはデータを分類する「型」があります。主な型は以下の通りです。</p>
 <table>
 <thead>
@@ -1515,64 +1630,62 @@ age = 25
 </tr>
 </tbody>
 </table>
-<p>!!! tip "COBOLとの型の違い"
-    - <strong>COBOL</strong>: 変数宣言時に型とサイズを厳密に指定（例：PIC X(10)で10文字固定）
-    - <strong>Python</strong>: 値に応じて自動的に型が決まり、サイズも動的に変化します</p>
-<pre><code>```cobol
-* COBOLの例
-01 WS-MESSAGE PIC X(20) VALUE "HELLO".
-* 20文字分の領域を確保（"HELLO     "のように空白で埋められる）
-```
-
-```python
-# Pythonの例
-message = "HELLO"  # 5文字分のメモリのみ使用
-message = "HELLO WORLD"  # 自動的に11文字分に拡張
-```
-</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">COBOLとの型の違い</p>
+<ul>
+<li><strong>COBOL</strong>: 変数宣言時に型とサイズを厳密に指定（例：PIC X(10)で10文字固定）</li>
+<li><strong>Python</strong>: 値に応じて自動的に型が決まり、サイズも動的に変化します</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c">* COBO</span><span class="nv">L</span><span class="err">の例</span>
+<span class="c">01 WS-</span><span class="nv">MESSAGE</span><span class="w"> </span><span class="kt">PIC X(20)</span><span class="w"> </span><span class="kp">VALUE </span><span class="s2">&quot;HELLO&quot;</span><span class="p">.</span>
+<span class="c">* 20文字</span><span class="err">分の領域を確保（</span><span class="s2">&quot;HELLO     &quot;</span><span class="err">のように空白で埋められる）</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pythonの例</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;HELLO&quot;</span>  <span class="c1"># 5文字分のメモリのみ使用</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;HELLO WORLD&quot;</span>  <span class="c1"># 自動的に11文字分に拡張</span>
+</code></pre></div>
+</div>
 <hr />
-<h2 id="_4">型の自動判別（動的型付け）</h2>
+<h2 id="_4">型の自動判別（動的型付け）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>Pythonは変数への代入時に、自動的に型を判別します。</p>
 <p>例：</p>
-<pre><code class="language-python">x = 10       # 整数型（int）として判別
-y = &quot;abc&quot;    # 文字列型（str）として判別
-z = 3.14     # 小数型（float）として判別
-is_valid = True  # 真偽値型（bool）として判別
-</code></pre>
-<p>!!! note "COBOLプログラマー向けの解説"
-    COBOLでは変数の型を事前に宣言しますが、Pythonでは値を代入した時点で型が決まります。</p>
-<pre><code>```cobol
-* COBOLでは事前に型を宣言
-01 WS-COUNTER PIC 9(3).
-01 WS-NAME    PIC X(20).
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>       <span class="c1"># 整数型（int）として判別</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;abc&quot;</span>    <span class="c1"># 文字列型（str）として判別</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mf">3.14</span>     <span class="c1"># 小数型（float）として判別</span>
+<span class="n">is_valid</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># 真偽値型（bool）として判別</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">COBOLプログラマー向けの解説</p>
+<p>COBOLでは変数の型を事前に宣言しますが、Pythonでは値を代入した時点で型が決まります。</p>
+<div class="highlight"><pre><span></span><code><span class="c">* COBO</span><span class="nv">L</span><span class="err">では事前に型を宣言</span>
+<span class="c">01 WS-</span><span class="nv">COUNTER</span><span class="w"> </span><span class="kt">PIC 9(3)</span><span class="p">.</span>
+<span class="c">01 WS-</span><span class="nv">NAME</span><span class="w">    </span><span class="kt">PIC X(20)</span><span class="p">.</span>
 
-MOVE 100 TO WS-COUNTER.
-MOVE "TANAKA" TO WS-NAME.
-```
+<span class="c">MOVE 1</span><span class="mi">00 </span><span class="kp">TO</span><span class="w"> </span><span class="nv">WS-COUNTER</span><span class="p">.</span>
+<span class="c">MOVE &quot;</span><span class="nv">TANAKA</span><span class="s2">&quot; TO WS-NAME.</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pythonでは代入時に型が自動決定</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">100</span>      <span class="c1"># 整数型として認識</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;TANAKA&quot;</span>    <span class="c1"># 文字列型として認識</span>
 
-```python
-# Pythonでは代入時に型が自動決定
-counter = 100      # 整数型として認識
-name = "TANAKA"    # 文字列型として認識
-
-# 同じ変数に別の型の値も代入可能（COBOLでは不可）
-counter = "百"     # 文字列型に変更される
-```
-</code></pre>
+<span class="c1"># 同じ変数に別の型の値も代入可能（COBOLでは不可）</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="s2">&quot;百&quot;</span>     <span class="c1"># 文字列型に変更される</span>
+</code></pre></div>
+</div>
 <hr />
-<h2 id="_5">型の確認方法</h2>
+<h2 id="_5">型の確認方法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>変数の型を確認するには、<code>type()</code> 関数を使います。</p>
 <p>例：</p>
-<pre><code class="language-python">x = 10
-y = &quot;abc&quot;
-z = 3.14
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;abc&quot;</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mf">3.14</span>
 
-print(type(x))  # 出力：&lt;class 'int'&gt;
-print(type(y))  # 出力：&lt;class 'str'&gt;
-print(type(z))  # 出力：&lt;class 'float'&gt;
-</code></pre>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>  <span class="c1"># 出力：&lt;class &#39;int&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>  <span class="c1"># 出力：&lt;class &#39;str&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>  <span class="c1"># 出力：&lt;class &#39;float&#39;&gt;</span>
+</code></pre></div>
 <hr />
-<h2 id="qa">よくある間違いとQ&amp;A</h2>
+<h2 id="qa">よくある間違いとQ&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><strong>変数名のルール</strong></p>
@@ -1597,14 +1710,14 @@ print(type(z))  # 出力：&lt;class 'float'&gt;
 </li>
 <li>例：</li>
 </ul>
-<pre><code class="language-python"># 間違った例
-x = &quot;10&quot;
-y = 5
-# print(x + y) はエラーになります。
+<div class="highlight"><pre><span></span><code><span class="c1"># 間違った例</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;10&quot;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="c1"># print(x + y) はエラーになります。</span>
 
-# 正しい例（型変換）
-print(int(x) + y)  # 出力：15
-</code></pre>
+<span class="c1"># 正しい例（型変換）</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># 出力：15</span>
+</code></pre></div>
 <hr />
 <blockquote>
 <p>変数は「データに名前をつけて管理する」ための非常に重要な仕組みです。</p>
