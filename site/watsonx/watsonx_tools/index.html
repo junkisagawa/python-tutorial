@@ -1,0 +1,2715 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="COBOL経験者向けPython & Flaskトレーニング教材">
+      
+      
+        <meta name="author" content="トレーニング運営">
+      
+      
+      
+        <link rel="prev" href="../watsonx_first_agent/">
+      
+      
+        <link rel="next" href="../watsonx_collaboration/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>ツール開発 - Python & Flask トレーニング</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans JP";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Python &amp; Flask トレーニング" class="md-header__button md-logo" aria-label="Python & Flask トレーニング" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python & Flask トレーニング
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ツール開発
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="light-blue"  aria-label="ダークモード"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="ダークモード" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="light-blue"  aria-label="ライトモード"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ライトモード" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  はじめに
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../python_intro/" class="md-tabs__link">
+          
+  
+  
+  Python基礎
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fastapi_intro/" class="md-tabs__link">
+          
+  
+  
+  FastAPI入門
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../watsonx_intro/" class="md-tabs__link">
+          
+  
+  
+  Watson X Orchestrate
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../flask_intro/" class="md-tabs__link">
+          
+  
+  
+  Flask入門
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../summary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  まとめ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../challenge/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  追加課題
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../appendix/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  付録
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python &amp; Flask トレーニング" class="md-nav__button md-logo" aria-label="Python & Flask トレーニング" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python & Flask トレーニング
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python基礎
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python基礎
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pythonとは
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    環境セットアップ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    変数と型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_if/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    条件分岐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ループ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_func/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_collection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    コレクション（リスト・辞書・セット）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ファイル操作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    エラー処理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FastAPI入門
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            FastAPI入門
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fastapi_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FastAPI概要
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fastapi_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API開発
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fastapi_api-document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    APIドキュメントの自動生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_http-requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTPリクエスト
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Watson X Orchestrate
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Watson X Orchestrate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Watson Xとは
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_ai_basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI・生成AIの基礎
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_prompt_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    プロンプトエンジニアリング
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    環境構築
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_first_agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめてのエージェント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ツール開発
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    ツール開発
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      このページで学ぶこと
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ツールとは？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ツールとは？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cobol" class="md-nav__link">
+    <span class="md-ellipsis">
+      COBOLとの比較で理解する
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ツールの基本構造
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ツールの基本構造">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      シンプルなツールの例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ1: 計算ツールの作成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ1: 計算ツールの作成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本的な計算ツール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ツールの登録とテスト
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ2: データベース連携ツール
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ2: データベース連携ツール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      顧客情報管理ツール
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ3: 外部API連携ツール
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ3: 外部API連携ツール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      天気情報取得ツール
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ4: ツールを使うエージェント
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ4: ツールを使うエージェント">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      営業支援エージェント
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      エラー処理とベストプラクティス
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="エラー処理とベストプラクティス">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 入力値の検証
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 例外処理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. ログ記録
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      練習問題
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="練習問題">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      問題1: 在庫管理ツールの作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      解答例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      宿題
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="宿題">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題1: 予約管理システムのツール開発
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題2: ツールのテストコード作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cobol" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題3: COBOLプログラマー向けツール開発ガイド
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      まとめ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_collaboration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    エージェント連携
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    実践演習
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_adk_to_wxo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADKからWXOへのデプロイ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_homework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    課題演習
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_challenge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    チャレンジ課題
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Flask入門
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Flask入門
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flask概要
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flask API開発
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DB連携
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    エラーハンドリング
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    まとめ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../challenge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    追加課題
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    付録
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      このページで学ぶこと
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ツールとは？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ツールとは？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cobol" class="md-nav__link">
+    <span class="md-ellipsis">
+      COBOLとの比較で理解する
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ツールの基本構造
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ツールの基本構造">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      シンプルなツールの例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ1: 計算ツールの作成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ1: 計算ツールの作成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本的な計算ツール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ツールの登録とテスト
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ2: データベース連携ツール
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ2: データベース連携ツール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      顧客情報管理ツール
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ3: 外部API連携ツール
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ3: 外部API連携ツール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      天気情報取得ツール
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ4: ツールを使うエージェント
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ4: ツールを使うエージェント">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      営業支援エージェント
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      エラー処理とベストプラクティス
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="エラー処理とベストプラクティス">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 入力値の検証
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 例外処理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. ログ記録
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      練習問題
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="練習問題">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      問題1: 在庫管理ツールの作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      解答例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      宿題
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="宿題">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題1: 予約管理システムのツール開発
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題2: ツールのテストコード作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cobol" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題3: COBOLプログラマー向けツール開発ガイド
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      まとめ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">エージェント用ツールの開発</h1>
+<h2 id="_2">このページで学ぶこと</h2>
+<p>AIエージェントが使える「ツール」を自分で作成する方法を学びます。ツールは、エージェントに特定の機能を提供するPython関数です。</p>
+<h2 id="_3">ツールとは？</h2>
+<h3 id="cobol">COBOLとの比較で理解する</h3>
+<table>
+<thead>
+<tr>
+<th>COBOLの概念</th>
+<th>Watson X Orchestrateのツール</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CALLで呼ぶサブプログラム</td>
+<td>Pythonで書いたツール関数</td>
+</tr>
+<tr>
+<td>COPY句で取り込むライブラリ</td>
+<td>importするPythonモジュール</td>
+</tr>
+<tr>
+<td>ファイルI/O（READ/WRITE）</td>
+<td>データベースアクセスツール</td>
+</tr>
+<tr>
+<td>COMPUTE文での計算</td>
+<td>計算処理ツール</td>
+</tr>
+</tbody>
+</table>
+<p>ツールは、エージェントが「できること」を増やすための拡張機能です。</p>
+<h2 id="_4">ツールの基本構造</h2>
+<h3 id="_5">シンプルなツールの例</h3>
+<pre><code class="language-python">def add_numbers(a: int, b: int) -&gt; int:
+    &quot;&quot;&quot;
+    2つの数値を足し算する
+
+    Args:
+        a (int): 1つ目の数値
+        b (int): 2つ目の数値
+
+    Returns:
+        int: 足し算の結果
+    &quot;&quot;&quot;
+    return a + b
+</code></pre>
+<p>💡 <strong>重要なポイント</strong>：
+1. <strong>関数名</strong>: わかりやすい名前をつける
+2. <strong>型ヒント</strong>: 引数と戻り値の型を明示
+3. <strong>docstring</strong>: 関数の説明を詳しく書く（エージェントはこれを読んで使い方を理解）</p>
+<h2 id="1">ステップ1: 計算ツールの作成</h2>
+<h3 id="_6">基本的な計算ツール</h3>
+<p><code>calculator_tools.py</code>を作成：</p>
+<pre><code class="language-python">def calculate_tax(price: float, tax_rate: float = 0.1) -&gt; dict:
+    &quot;&quot;&quot;
+    商品価格から税込み価格を計算する
+
+    Args:
+        price (float): 税抜き価格
+        tax_rate (float): 税率（デフォルト10%）
+
+    Returns:
+        dict: 計算結果を含む辞書
+            - price: 税抜き価格
+            - tax_amount: 税額
+            - total: 税込み価格
+    &quot;&quot;&quot;
+    tax_amount = price * tax_rate
+    total = price + tax_amount
+
+    return {
+        &quot;price&quot;: price,
+        &quot;tax_amount&quot;: round(tax_amount, 2),
+        &quot;total&quot;: round(total, 2),
+        &quot;tax_rate_percent&quot;: tax_rate * 100
+    }
+
+def calculate_discount(original_price: float, discount_percent: float) -&gt; dict:
+    &quot;&quot;&quot;
+    割引価格を計算する
+
+    Args:
+        original_price (float): 元の価格
+        discount_percent (float): 割引率（%）
+
+    Returns:
+        dict: 割引計算の結果
+    &quot;&quot;&quot;
+    if discount_percent &lt; 0 or discount_percent &gt; 100:
+        return {&quot;error&quot;: &quot;割引率は0〜100の間で指定してください&quot;}
+
+    discount_rate = discount_percent / 100
+    discount_amount = original_price * discount_rate
+    discounted_price = original_price - discount_amount
+
+    return {
+        &quot;original_price&quot;: original_price,
+        &quot;discount_percent&quot;: discount_percent,
+        &quot;discount_amount&quot;: round(discount_amount, 2),
+        &quot;discounted_price&quot;: round(discounted_price, 2)
+    }
+
+def calculate_installment(total_price: float, months: int, interest_rate: float = 0) -&gt; dict:
+    &quot;&quot;&quot;
+    分割払いの月額を計算する
+
+    Args:
+        total_price (float): 総額
+        months (int): 分割回数
+        interest_rate (float): 年利（%、デフォルト0）
+
+    Returns:
+        dict: 分割払いの計算結果
+    &quot;&quot;&quot;
+    if months &lt;= 0:
+        return {&quot;error&quot;: &quot;分割回数は1以上を指定してください&quot;}
+
+    # 金利がある場合の計算
+    if interest_rate &gt; 0:
+        monthly_rate = interest_rate / 100 / 12
+        monthly_payment = total_price * (monthly_rate * (1 + monthly_rate)**months) / ((1 + monthly_rate)**months - 1)
+        total_payment = monthly_payment * months
+        interest_amount = total_payment - total_price
+    else:
+        monthly_payment = total_price / months
+        total_payment = total_price
+        interest_amount = 0
+
+    return {
+        &quot;total_price&quot;: total_price,
+        &quot;months&quot;: months,
+        &quot;monthly_payment&quot;: round(monthly_payment, 2),
+        &quot;total_payment&quot;: round(total_payment, 2),
+        &quot;interest_amount&quot;: round(interest_amount, 2),
+        &quot;interest_rate&quot;: interest_rate
+    }
+</code></pre>
+<h3 id="_7">ツールの登録とテスト</h3>
+<pre><code class="language-bash"># ツールをインポート
+orchestrate tools import -k python -f calculator_tools.py
+
+# ツールの一覧を確認
+orchestrate tools list
+</code></pre>
+<h2 id="2">ステップ2: データベース連携ツール</h2>
+<h3 id="_8">顧客情報管理ツール</h3>
+<p><code>customer_tools.py</code>を作成：</p>
+<pre><code class="language-python">import json
+import os
+from typing import Optional, List, Dict
+from datetime import datetime
+
+# 簡易的なJSONデータベース
+CUSTOMER_DB_FILE = &quot;customers.json&quot;
+
+def _load_customers() -&gt; List[Dict]:
+    &quot;&quot;&quot;顧客データを読み込む（内部関数）&quot;&quot;&quot;
+    if os.path.exists(CUSTOMER_DB_FILE):
+        with open(CUSTOMER_DB_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return []
+
+def _save_customers(customers: List[Dict]):
+    &quot;&quot;&quot;顧客データを保存する（内部関数）&quot;&quot;&quot;
+    with open(CUSTOMER_DB_FILE, 'w', encoding='utf-8') as f:
+        json.dump(customers, f, ensure_ascii=False, indent=2)
+
+def search_customer(search_term: str) -&gt; List[Dict]:
+    &quot;&quot;&quot;
+    顧客を検索する
+
+    Args:
+        search_term (str): 検索キーワード（名前、電話番号、メールアドレス）
+
+    Returns:
+        List[Dict]: 検索結果のリスト
+    &quot;&quot;&quot;
+    customers = _load_customers()
+    results = []
+
+    search_term_lower = search_term.lower()
+
+    for customer in customers:
+        if (search_term_lower in customer.get('name', '').lower() or
+            search_term in customer.get('phone', '') or
+            search_term_lower in customer.get('email', '').lower()):
+            results.append(customer)
+
+    return results
+
+def add_customer(name: str, phone: str, email: str, notes: Optional[str] = None) -&gt; Dict:
+    &quot;&quot;&quot;
+    新規顧客を追加する
+
+    Args:
+        name (str): 顧客名
+        phone (str): 電話番号
+        email (str): メールアドレス
+        notes (Optional[str]): 備考
+
+    Returns:
+        Dict: 追加された顧客情報
+    &quot;&quot;&quot;
+    customers = _load_customers()
+
+    # 重複チェック
+    for customer in customers:
+        if customer['email'] == email:
+            return {&quot;error&quot;: &quot;このメールアドレスは既に登録されています&quot;}
+
+    # 新規顧客ID生成
+    customer_id = len(customers) + 1
+
+    new_customer = {
+        &quot;id&quot;: customer_id,
+        &quot;name&quot;: name,
+        &quot;phone&quot;: phone,
+        &quot;email&quot;: email,
+        &quot;notes&quot;: notes or &quot;&quot;,
+        &quot;created_at&quot;: datetime.now().isoformat(),
+        &quot;updated_at&quot;: datetime.now().isoformat()
+    }
+
+    customers.append(new_customer)
+    _save_customers(customers)
+
+    return new_customer
+
+def get_customer_by_id(customer_id: int) -&gt; Optional[Dict]:
+    &quot;&quot;&quot;
+    IDで顧客情報を取得する
+
+    Args:
+        customer_id (int): 顧客ID
+
+    Returns:
+        Optional[Dict]: 顧客情報（見つからない場合はNone）
+    &quot;&quot;&quot;
+    customers = _load_customers()
+
+    for customer in customers:
+        if customer['id'] == customer_id:
+            return customer
+
+    return None
+
+def update_customer_notes(customer_id: int, notes: str) -&gt; Dict:
+    &quot;&quot;&quot;
+    顧客の備考を更新する
+
+    Args:
+        customer_id (int): 顧客ID
+        notes (str): 新しい備考
+
+    Returns:
+        Dict: 更新結果
+    &quot;&quot;&quot;
+    customers = _load_customers()
+
+    for customer in customers:
+        if customer['id'] == customer_id:
+            customer['notes'] = notes
+            customer['updated_at'] = datetime.now().isoformat()
+            _save_customers(customers)
+            return {&quot;success&quot;: True, &quot;message&quot;: &quot;備考を更新しました&quot;, &quot;customer&quot;: customer}
+
+    return {&quot;error&quot;: &quot;指定された顧客が見つかりません&quot;}
+</code></pre>
+<h2 id="3-api">ステップ3: 外部API連携ツール</h2>
+<h3 id="_9">天気情報取得ツール</h3>
+<p><code>weather_tools.py</code>を作成：</p>
+<pre><code class="language-python">import requests
+from typing import Dict, Optional
+
+def get_weather_info(city: str) -&gt; Dict:
+    &quot;&quot;&quot;
+    指定された都市の天気情報を取得する（ダミー実装）
+
+    Args:
+        city (str): 都市名（例: &quot;東京&quot;, &quot;大阪&quot;）
+
+    Returns:
+        Dict: 天気情報
+    &quot;&quot;&quot;
+    # 実際のAPIではなく、ダミーデータを返す
+    # 本番環境では、OpenWeatherMap APIなどを使用
+
+    weather_data = {
+        &quot;東京&quot;: {
+            &quot;temperature&quot;: 22,
+            &quot;condition&quot;: &quot;晴れ&quot;,
+            &quot;humidity&quot;: 65,
+            &quot;wind_speed&quot;: 3.5
+        },
+        &quot;大阪&quot;: {
+            &quot;temperature&quot;: 24,
+            &quot;condition&quot;: &quot;曇り&quot;,
+            &quot;humidity&quot;: 70,
+            &quot;wind_speed&quot;: 2.8
+        },
+        &quot;札幌&quot;: {
+            &quot;temperature&quot;: 15,
+            &quot;condition&quot;: &quot;雨&quot;,
+            &quot;humidity&quot;: 80,
+            &quot;wind_speed&quot;: 4.2
+        }
+    }
+
+    if city in weather_data:
+        data = weather_data[city]
+        return {
+            &quot;city&quot;: city,
+            &quot;temperature&quot;: data[&quot;temperature&quot;],
+            &quot;condition&quot;: data[&quot;condition&quot;],
+            &quot;humidity&quot;: data[&quot;humidity&quot;],
+            &quot;wind_speed&quot;: data[&quot;wind_speed&quot;],
+            &quot;description&quot;: f&quot;{city}の現在の天気は{data['condition']}、気温は{data['temperature']}度です。&quot;
+        }
+    else:
+        return {
+            &quot;error&quot;: f&quot;{city}の天気情報は取得できません&quot;,
+            &quot;available_cities&quot;: list(weather_data.keys())
+        }
+
+def get_exchange_rate(from_currency: str, to_currency: str, amount: float = 1) -&gt; Dict:
+    &quot;&quot;&quot;
+    為替レートを取得して換算する（ダミー実装）
+
+    Args:
+        from_currency (str): 変換元通貨（例: &quot;JPY&quot;, &quot;USD&quot;）
+        to_currency (str): 変換先通貨
+        amount (float): 変換する金額
+
+    Returns:
+        Dict: 為替レート情報と換算結果
+    &quot;&quot;&quot;
+    # ダミーの為替レート
+    rates = {
+        &quot;USD&quot;: {&quot;JPY&quot;: 150.5, &quot;EUR&quot;: 0.92, &quot;GBP&quot;: 0.79},
+        &quot;JPY&quot;: {&quot;USD&quot;: 0.00664, &quot;EUR&quot;: 0.00611, &quot;GBP&quot;: 0.00525},
+        &quot;EUR&quot;: {&quot;USD&quot;: 1.087, &quot;JPY&quot;: 163.6, &quot;GBP&quot;: 0.859}
+    }
+
+    from_currency = from_currency.upper()
+    to_currency = to_currency.upper()
+
+    if from_currency == to_currency:
+        return {
+            &quot;from_currency&quot;: from_currency,
+            &quot;to_currency&quot;: to_currency,
+            &quot;rate&quot;: 1.0,
+            &quot;amount&quot;: amount,
+            &quot;converted_amount&quot;: amount
+        }
+
+    if from_currency in rates and to_currency in rates[from_currency]:
+        rate = rates[from_currency][to_currency]
+        converted = amount * rate
+
+        return {
+            &quot;from_currency&quot;: from_currency,
+            &quot;to_currency&quot;: to_currency,
+            &quot;rate&quot;: rate,
+            &quot;amount&quot;: amount,
+            &quot;converted_amount&quot;: round(converted, 2),
+            &quot;description&quot;: f&quot;{amount} {from_currency} = {round(converted, 2)} {to_currency}&quot;
+        }
+    else:
+        return {
+            &quot;error&quot;: f&quot;{from_currency}から{to_currency}への為替レートは利用できません&quot;
+        }
+</code></pre>
+<h2 id="4">ステップ4: ツールを使うエージェント</h2>
+<h3 id="_10">営業支援エージェント</h3>
+<p><code>sales-agent.yaml</code>を作成：</p>
+<pre><code class="language-yaml">spec_version: v1
+style: react
+name: sales_support_agent
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+description: &quot;営業活動を支援するエージェント&quot;
+instructions: |
+  あなたは優秀な営業支援アシスタントです。
+
+  主な業務：
+  1. 顧客情報の管理
+  2. 見積もりの作成
+  3. 為替レートの確認
+  4. 天気情報の提供（訪問時の参考）
+
+  対応のポイント：
+  - 正確な計算を心がける
+  - 顧客情報は丁寧に扱う
+  - 見積もりには税込み価格を明記
+  - 分割払いの提案も積極的に行う
+
+  ツールの使い方：
+  - calculate_tax: 税込み価格の計算
+  - calculate_discount: 割引価格の計算
+  - calculate_installment: 分割払いの計算
+  - search_customer: 顧客検索
+  - add_customer: 新規顧客登録
+  - get_weather_info: 天気情報取得
+  - get_exchange_rate: 為替レート確認
+tools:
+  - calculate_tax
+  - calculate_discount
+  - calculate_installment
+  - search_customer
+  - add_customer
+  - get_customer_by_id
+  - update_customer_notes
+  - get_weather_info
+  - get_exchange_rate
+</code></pre>
+<h2 id="_11">エラー処理とベストプラクティス</h2>
+<h3 id="1_1">1. 入力値の検証</h3>
+<pre><code class="language-python">def safe_divide(numerator: float, denominator: float) -&gt; Dict:
+    &quot;&quot;&quot;
+    安全な除算を行う
+
+    Args:
+        numerator (float): 分子
+        denominator (float): 分母
+
+    Returns:
+        Dict: 計算結果またはエラー
+    &quot;&quot;&quot;
+    if denominator == 0:
+        return {&quot;error&quot;: &quot;0で除算することはできません&quot;}
+
+    result = numerator / denominator
+    return {
+        &quot;numerator&quot;: numerator,
+        &quot;denominator&quot;: denominator,
+        &quot;result&quot;: round(result, 4)
+    }
+</code></pre>
+<h3 id="2_1">2. 例外処理</h3>
+<pre><code class="language-python">def read_file_safely(file_path: str) -&gt; Dict:
+    &quot;&quot;&quot;
+    ファイルを安全に読み込む
+
+    Args:
+        file_path (str): ファイルパス
+
+    Returns:
+        Dict: ファイル内容またはエラー
+    &quot;&quot;&quot;
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return {
+            &quot;success&quot;: True,
+            &quot;content&quot;: content,
+            &quot;file_path&quot;: file_path
+        }
+    except FileNotFoundError:
+        return {&quot;error&quot;: f&quot;ファイルが見つかりません: {file_path}&quot;}
+    except PermissionError:
+        return {&quot;error&quot;: f&quot;ファイルの読み取り権限がありません: {file_path}&quot;}
+    except Exception as e:
+        return {&quot;error&quot;: f&quot;予期しないエラーが発生しました: {str(e)}&quot;}
+</code></pre>
+<h3 id="3">3. ログ記録</h3>
+<pre><code class="language-python">import logging
+from datetime import datetime
+
+# ログ設定
+logging.basicConfig(
+    filename='agent_tools.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+def process_order(order_id: str, action: str) -&gt; Dict:
+    &quot;&quot;&quot;
+    注文を処理する（ログ記録付き）
+
+    Args:
+        order_id (str): 注文ID
+        action (str): 実行するアクション
+
+    Returns:
+        Dict: 処理結果
+    &quot;&quot;&quot;
+    logger = logging.getLogger(__name__)
+
+    try:
+        # 処理開始をログに記録
+        logger.info(f&quot;注文処理開始: order_id={order_id}, action={action}&quot;)
+
+        # ここで実際の処理を行う
+        result = {
+            &quot;order_id&quot;: order_id,
+            &quot;action&quot;: action,
+            &quot;status&quot;: &quot;completed&quot;,
+            &quot;timestamp&quot;: datetime.now().isoformat()
+        }
+
+        # 成功をログに記録
+        logger.info(f&quot;注文処理成功: order_id={order_id}&quot;)
+
+        return result
+
+    except Exception as e:
+        # エラーをログに記録
+        logger.error(f&quot;注文処理エラー: order_id={order_id}, error={str(e)}&quot;)
+        return {&quot;error&quot;: &quot;注文処理中にエラーが発生しました&quot;}
+</code></pre>
+<h2 id="_12">練習問題</h2>
+<h3 id="1_2">問題1: 在庫管理ツールの作成</h3>
+<p>以下の機能を持つ在庫管理ツールを作成してください：</p>
+<ol>
+<li><code>check_stock(product_id: str) -&gt; Dict</code>: 在庫数を確認</li>
+<li><code>update_stock(product_id: str, quantity: int) -&gt; Dict</code>: 在庫を更新</li>
+<li><code>low_stock_alert(threshold: int = 10) -&gt; List[Dict]</code>: 在庫が少ない商品をリスト</li>
+</ol>
+<h3 id="_13">解答例</h3>
+<pre><code class="language-python"># inventory_tools.py
+import json
+import os
+from typing import Dict, List
+
+INVENTORY_FILE = &quot;inventory.json&quot;
+
+def _load_inventory() -&gt; Dict:
+    if os.path.exists(INVENTORY_FILE):
+        with open(INVENTORY_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {}
+
+def _save_inventory(inventory: Dict):
+    with open(INVENTORY_FILE, 'w', encoding='utf-8') as f:
+        json.dump(inventory, f, ensure_ascii=False, indent=2)
+
+def check_stock(product_id: str) -&gt; Dict:
+    &quot;&quot;&quot;
+    商品の在庫数を確認する
+
+    Args:
+        product_id (str): 商品ID
+
+    Returns:
+        Dict: 在庫情報
+    &quot;&quot;&quot;
+    inventory = _load_inventory()
+
+    if product_id in inventory:
+        stock_info = inventory[product_id]
+        return {
+            &quot;product_id&quot;: product_id,
+            &quot;product_name&quot;: stock_info.get(&quot;name&quot;, &quot;不明&quot;),
+            &quot;current_stock&quot;: stock_info.get(&quot;quantity&quot;, 0),
+            &quot;unit&quot;: stock_info.get(&quot;unit&quot;, &quot;個&quot;)
+        }
+    else:
+        return {&quot;error&quot;: f&quot;商品ID {product_id} は登録されていません&quot;}
+
+def update_stock(product_id: str, quantity_change: int) -&gt; Dict:
+    &quot;&quot;&quot;
+    在庫数を更新する
+
+    Args:
+        product_id (str): 商品ID
+        quantity_change (int): 在庫の変更数（正: 入荷、負: 出荷）
+
+    Returns:
+        Dict: 更新結果
+    &quot;&quot;&quot;
+    inventory = _load_inventory()
+
+    if product_id not in inventory:
+        return {&quot;error&quot;: f&quot;商品ID {product_id} は登録されていません&quot;}
+
+    current_stock = inventory[product_id].get(&quot;quantity&quot;, 0)
+    new_stock = current_stock + quantity_change
+
+    if new_stock &lt; 0:
+        return {&quot;error&quot;: &quot;在庫が不足しています&quot;, &quot;current_stock&quot;: current_stock, &quot;requested&quot;: -quantity_change}
+
+    inventory[product_id][&quot;quantity&quot;] = new_stock
+    _save_inventory(inventory)
+
+    return {
+        &quot;product_id&quot;: product_id,
+        &quot;product_name&quot;: inventory[product_id].get(&quot;name&quot;, &quot;不明&quot;),
+        &quot;previous_stock&quot;: current_stock,
+        &quot;change&quot;: quantity_change,
+        &quot;new_stock&quot;: new_stock
+    }
+
+def low_stock_alert(threshold: int = 10) -&gt; List[Dict]:
+    &quot;&quot;&quot;
+    在庫が少ない商品をリストアップ
+
+    Args:
+        threshold (int): 警告する在庫数の閾値
+
+    Returns:
+        List[Dict]: 在庫が少ない商品のリスト
+    &quot;&quot;&quot;
+    inventory = _load_inventory()
+    low_stock_items = []
+
+    for product_id, info in inventory.items():
+        quantity = info.get(&quot;quantity&quot;, 0)
+        if quantity &lt;= threshold:
+            low_stock_items.append({
+                &quot;product_id&quot;: product_id,
+                &quot;product_name&quot;: info.get(&quot;name&quot;, &quot;不明&quot;),
+                &quot;current_stock&quot;: quantity,
+                &quot;unit&quot;: info.get(&quot;unit&quot;, &quot;個&quot;)
+            })
+
+    return sorted(low_stock_items, key=lambda x: x[&quot;current_stock&quot;])
+</code></pre>
+<h2 id="_14">宿題</h2>
+<h3 id="1_3">課題1: 予約管理システムのツール開発</h3>
+<p>以下の機能を持つ予約管理ツールを開発してください：</p>
+<ol>
+<li><strong>予約作成</strong>: 日時、サービス、顧客情報を登録</li>
+<li><strong>予約確認</strong>: 特定の日の予約一覧を表示</li>
+<li><strong>予約変更</strong>: 既存の予約を変更</li>
+<li><strong>予約キャンセル</strong>: 予約を取り消し</li>
+<li><strong>空き時間検索</strong>: 指定期間の空き時間を検索</li>
+</ol>
+<p>要件：
+- 重複予約の防止
+- 営業時間外の予約を拒否
+- キャンセル料の計算機能</p>
+<h3 id="2_2">課題2: ツールのテストコード作成</h3>
+<p>作成したツールに対するテストコードを書いてください：</p>
+<pre><code class="language-python"># test_tools.py
+import unittest
+from calculator_tools import calculate_tax, calculate_discount
+
+class TestCalculatorTools(unittest.TestCase):
+    def test_calculate_tax(self):
+        # テストケースを記述
+        pass
+
+    def test_calculate_discount(self):
+        # テストケースを記述
+        pass
+
+if __name__ == &quot;__main__&quot;:
+    unittest.main()
+</code></pre>
+<h3 id="3-cobol">課題3: COBOLプログラマー向けツール開発ガイド</h3>
+<p>COBOLプログラマーがPythonでツールを開発する際の注意点やヒントをまとめたガイドを作成してください。以下の項目を含めること：</p>
+<ol>
+<li>COBOLとPythonの構文対応表</li>
+<li>よくある間違いと解決方法</li>
+<li>デバッグのコツ</li>
+<li>パフォーマンスの考慮点</li>
+</ol>
+<h2 id="_15">まとめ</h2>
+<p>ツール開発の基本を学びました！</p>
+<p>重要なポイント：
+- ツールは単純な関数として実装
+- 型ヒントとdocstringは必須
+- エラー処理を適切に行う
+- 戻り値は辞書形式が扱いやすい</p>
+<p>COBOLのサブプログラムと同じように、ツールは再利用可能な部品です。良いツールを作ることで、エージェントの能力が大きく向上します。</p>
+<p>次は、複数のエージェントを連携させる方法を学びます！</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

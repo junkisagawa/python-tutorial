@@ -2,6 +2,9 @@
 
 関数は、繰り返し利用する処理に名前をつけ、必要な時に呼び出せる仕組みです。コードを整理し、再利用を簡単にします。
 
+!!! info "COBOLプログラマーの皆様へ"
+    Pythonの関数は、COBOLのSECTIONやPARAGRAPH、またはCALLで呼び出すサブプログラムに似ています。しかし、より柔軟で簡潔に書ける点が違います。
+
 ---
 
 ## 関数とは？
@@ -27,6 +30,26 @@ def say_hello():
 say_hello()  # 関数を呼び出す
 ```
 
+### COBOLとの比較
+
+```cobol
+* COBOLの例（PARAGRAPHを使った場合）
+PROCEDURE DIVISION.
+MAIN-PARAGRAPH.
+    PERFORM SAY-HELLO.
+    STOP RUN.
+
+SAY-HELLO.
+    DISPLAY "こんにちは！".
+```
+
+| 特徴 | COBOL | Python |
+|------|-------|--------|
+| 定義の方法 | PARAGRAPH名を記述 | defキーワードを使用 |
+| 呼び出し方 | PERFORM文 | 関数名() |
+| 引数の渡し方 | USING句（サブプログラム） | カッコ内に指定 |
+| 戻り値 | RETURNING句（一部） | return文 |
+
 このコードを実行すると、次のように表示されます。
 
 ```
@@ -50,6 +73,23 @@ def greet(name):
 message = greet("たろう")
 print(message)
 ```
+
+!!! tip "COBOLのサブプログラムとの違い"
+    COBOLのサブプログラムではLINKAGE SECTIONを使ってパラメータを受け渡しますが、Pythonではよりシンプルに記述できます。
+    
+    ```cobol
+    * COBOLサブプログラムの例
+    IDENTIFICATION DIVISION.
+    PROGRAM-ID. GREET-SUB.
+    DATA DIVISION.
+    LINKAGE SECTION.
+    01 LS-NAME PIC X(20).
+    01 LS-MESSAGE PIC X(50).
+    
+    PROCEDURE DIVISION USING LS-NAME RETURNING LS-MESSAGE.
+        STRING "こんにちは、" LS-NAME "さん" 
+            DELIMITED BY SIZE INTO LS-MESSAGE.
+    ```
 
 このコードを実行すると、次のように表示されます。
 

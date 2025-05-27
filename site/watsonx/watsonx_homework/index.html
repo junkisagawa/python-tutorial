@@ -1,0 +1,2625 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="COBOL経験者向けPython & Flaskトレーニング教材">
+      
+      
+        <meta name="author" content="トレーニング運営">
+      
+      
+      
+        <link rel="prev" href="../watsonx_adk_to_wxo/">
+      
+      
+        <link rel="next" href="../watsonx_challenge/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>課題演習 - Python & Flask トレーニング</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans JP";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#watsonx" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Python &amp; Flask トレーニング" class="md-header__button md-logo" aria-label="Python & Flask トレーニング" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python & Flask トレーニング
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              課題演習
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="light-blue"  aria-label="ダークモード"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="ダークモード" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="light-blue"  aria-label="ライトモード"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ライトモード" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  はじめに
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../python_intro/" class="md-tabs__link">
+          
+  
+  
+  Python基礎
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fastapi_intro/" class="md-tabs__link">
+          
+  
+  
+  FastAPI入門
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../watsonx_intro/" class="md-tabs__link">
+          
+  
+  
+  Watson X Orchestrate
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../flask_intro/" class="md-tabs__link">
+          
+  
+  
+  Flask入門
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../summary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  まとめ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../challenge/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  追加課題
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../appendix/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  付録
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python &amp; Flask トレーニング" class="md-nav__button md-logo" aria-label="Python & Flask トレーニング" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python & Flask トレーニング
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python基礎
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python基礎
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pythonとは
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    環境セットアップ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    変数と型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_if/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    条件分岐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ループ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_func/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_collection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    コレクション（リスト・辞書・セット）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ファイル操作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    エラー処理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FastAPI入門
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            FastAPI入門
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fastapi_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FastAPI概要
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fastapi_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API開発
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fastapi_api-document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    APIドキュメントの自動生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basic_http-requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTPリクエスト
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Watson X Orchestrate
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Watson X Orchestrate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Watson Xとは
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_ai_basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI・生成AIの基礎
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_prompt_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    プロンプトエンジニアリング
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    環境構築
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_first_agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめてのエージェント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ツール開発
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_collaboration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    エージェント連携
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    実践演習
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_adk_to_wxo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADKからWXOへのデプロイ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    課題演習
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    課題演習
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題1: 社内IT問い合わせ対応エージェント 【難易度：★☆☆】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="課題1: 社内IT問い合わせ対応エージェント 【難易度：★☆☆】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      要件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      実装のヒント
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      評価基準
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題2: 在庫管理アシスタント 【難易度：★★☆】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="課題2: 在庫管理アシスタント 【難易度：★★☆】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      要件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      実装例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロンプト設計
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      評価基準
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題3: 顧客対応自動化エージェント 【難易度：★★★】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="課題3: 顧客対応自動化エージェント 【難易度：★★★】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      要件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      アーキテクチャ設計
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      実装の重要ポイント
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      マルチエージェント構成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      評価基準
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題4: 統合業務支援エージェント 【難易度：★★★★】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="課題4: 統合業務支援エージェント 【難易度：★★★★】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      要件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      実装チャレンジ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      統合ワークフロー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      評価基準
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      提出方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      評価のポイント
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="評価のポイント">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      技術面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビジネス面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      創造性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      追加リソース
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="追加リソース">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考ドキュメント
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      サンプルコード
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      まとめ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsonx_challenge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    チャレンジ課題
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Flask入門
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Flask入門
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flask概要
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flask API開発
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DB連携
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flask_error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    エラーハンドリング
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    まとめ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../challenge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    追加課題
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    付録
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題1: 社内IT問い合わせ対応エージェント 【難易度：★☆☆】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="課題1: 社内IT問い合わせ対応エージェント 【難易度：★☆☆】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      要件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      実装のヒント
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      評価基準
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題2: 在庫管理アシスタント 【難易度：★★☆】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="課題2: 在庫管理アシスタント 【難易度：★★☆】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      要件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      実装例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロンプト設計
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      評価基準
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題3: 顧客対応自動化エージェント 【難易度：★★★】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="課題3: 顧客対応自動化エージェント 【難易度：★★★】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      要件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      アーキテクチャ設計
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      実装の重要ポイント
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      マルチエージェント構成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      評価基準
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      課題4: 統合業務支援エージェント 【難易度：★★★★】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="課題4: 統合業務支援エージェント 【難易度：★★★★】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      要件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      実装チャレンジ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      統合ワークフロー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      評価基準
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      提出方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      評価のポイント
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="評価のポイント">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      技術面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビジネス面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      創造性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      追加リソース
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="追加リソース">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考ドキュメント
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      サンプルコード
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      まとめ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="watsonx">Watsonx 課題演習</h1>
+<p>このセクションでは、実務で活用できるAIエージェントを自分で設計・開発する課題を提供します。各課題は段階的に難易度が上がるように設計されています。</p>
+<p>!!! info "課題の進め方"
+    1. 各課題の要件を理解する
+    2. 設計を行う（エージェントの役割、必要なツール、プロンプト）
+    3. ADKで実装する
+    4. テストを行う
+    5. （オプション）WXOにデプロイする</p>
+<hr />
+<h2 id="1-it">課題1: 社内IT問い合わせ対応エージェント 【難易度：★☆☆】</h2>
+<h3 id="_1">背景</h3>
+<p>社内のIT部門には、パスワードリセットやソフトウェアのインストール方法など、同じような問い合わせが繰り返し来ます。これらの基本的な問い合わせに自動対応するエージェントを作成してください。</p>
+<h3 id="_2">要件</h3>
+<ol>
+<li><strong>対応する問い合わせ種別</strong></li>
+<li>パスワードリセット手順の案内</li>
+<li>VPN接続方法の説明</li>
+<li>プリンター設定のガイド</li>
+<li>
+<p>よく使うソフトウェアのインストール手順</p>
+</li>
+<li>
+<p><strong>機能要件</strong></p>
+</li>
+<li>ユーザーの問い合わせ内容を理解し、適切なカテゴリに分類</li>
+<li>段階的な手順を分かりやすく説明</li>
+<li>必要に応じて画像やリンクを提示</li>
+<li>解決できない場合は人間のサポートにエスカレーション</li>
+</ol>
+<h3 id="_3">実装のヒント</h3>
+<pre><code class="language-yaml"># agent_config.yaml の例
+agent:
+  name: it_support_agent
+  description: 社内IT問い合わせ対応エージェント
+
+  system_prompt: |
+    あなたは社内ITサポートの専門家です。
+    ユーザーからの技術的な問い合わせに対して、
+    親切で分かりやすい説明を心がけてください。
+
+    対応可能な問い合わせ：
+    1. パスワード関連
+    2. VPN接続
+    3. プリンター設定
+    4. ソフトウェアインストール
+
+    解決できない場合は、ITヘルプデスク（内線: 1234）への
+    連絡を案内してください。
+
+tools:
+  - name: knowledge_search
+    description: IT手順書データベースを検索
+  - name: ticket_creation
+    description: サポートチケットを作成
+</code></pre>
+<h3 id="_4">評価基準</h3>
+<ul>
+<li>[ ] 4種類以上の問い合わせに適切に対応できる</li>
+<li>[ ] 手順が明確で分かりやすい</li>
+<li>[ ] エスカレーションが適切に機能する</li>
+<li>[ ] ユーザビリティが高い（親切な対応）</li>
+</ul>
+<hr />
+<h2 id="2">課題2: 在庫管理アシスタント 【難易度：★★☆】</h2>
+<h3 id="_5">背景</h3>
+<p>倉庫の在庫管理を効率化するため、在庫の確認、発注提案、在庫レポート作成を行うエージェントを開発してください。</p>
+<h3 id="_6">要件</h3>
+<ol>
+<li><strong>基本機能</strong></li>
+<li>商品名やSKUから在庫数を検索</li>
+<li>在庫切れ・在庫僅少の商品をアラート</li>
+<li>過去の出荷データから適正在庫を計算</li>
+<li>
+<p>発注提案の作成</p>
+</li>
+<li>
+<p><strong>レポート機能</strong></p>
+</li>
+<li>日次在庫レポートの生成</li>
+<li>ABC分析（商品の重要度分析）</li>
+<li>
+<p>在庫回転率の計算</p>
+</li>
+<li>
+<p><strong>データ連携</strong></p>
+</li>
+<li>在庫データベースとの連携</li>
+<li>発注システムとの連携</li>
+<li>Excelレポートの出力</li>
+</ol>
+<h3 id="_7">実装例</h3>
+<pre><code class="language-python"># tools/inventory_tools.py
+from typing import Dict, List
+import pandas as pd
+
+class InventoryTools:
+    def check_stock(self, product_id: str) -&gt; Dict:
+        &quot;&quot;&quot;
+        在庫数を確認
+        &quot;&quot;&quot;
+        # 実装例
+        return {
+            &quot;product_id&quot;: product_id,
+            &quot;product_name&quot;: &quot;製品A&quot;,
+            &quot;current_stock&quot;: 150,
+            &quot;reserved&quot;: 20,
+            &quot;available&quot;: 130,
+            &quot;reorder_point&quot;: 100,
+            &quot;status&quot;: &quot;normal&quot;
+        }
+
+    def calculate_reorder_quantity(self, product_id: str) -&gt; Dict:
+        &quot;&quot;&quot;
+        適正発注量を計算
+        &quot;&quot;&quot;
+        # 過去の販売データから計算
+        daily_average = 10
+        lead_time = 7
+        safety_stock = 50
+
+        reorder_qty = (daily_average * lead_time) + safety_stock
+
+        return {
+            &quot;product_id&quot;: product_id,
+            &quot;recommended_quantity&quot;: reorder_qty,
+            &quot;estimated_cost&quot;: reorder_qty * 1000
+        }
+
+    def generate_inventory_report(self) -&gt; str:
+        &quot;&quot;&quot;
+        在庫レポートを生成
+        &quot;&quot;&quot;
+        # レポート生成ロジック
+        report = &quot;&quot;&quot;
+        📊 日次在庫レポート
+        日付: 2024-01-15
+
+        【在庫サマリー】
+        - 総SKU数: 500
+        - 在庫切れ: 5件
+        - 在庫僅少: 23件
+        - 過剰在庫: 12件
+
+        【要対応商品】
+        1. 商品A (SKU: 12345) - 在庫切れ
+        2. 商品B (SKU: 23456) - 残り10個
+        ...
+        &quot;&quot;&quot;
+        return report
+</code></pre>
+<h3 id="_8">プロンプト設計</h3>
+<pre><code class="language-python">system_prompt = &quot;&quot;&quot;
+あなたは在庫管理の専門家です。以下の役割を担います：
+
+1. 在庫状況の確認と報告
+2. 適正在庫の維持に向けた提案
+3. 発注タイミングと数量の最適化
+4. 在庫関連の問題解決
+
+重要な指標：
+- 在庫回転率
+- 欠品率
+- 過剰在庫率
+- リードタイム
+
+常に数値に基づいた客観的な分析を行い、
+コスト削減と顧客満足度の両立を目指してください。
+&quot;&quot;&quot;
+</code></pre>
+<h3 id="_9">評価基準</h3>
+<ul>
+<li>[ ] 在庫検索が正確に動作する</li>
+<li>[ ] 発注提案が適切（過不足がない）</li>
+<li>[ ] レポートが見やすく実用的</li>
+<li>[ ] エラーハンドリングが適切</li>
+<li>[ ] COBOLシステムとの連携を想定した設計</li>
+</ul>
+<hr />
+<h2 id="3">課題3: 顧客対応自動化エージェント 【難易度：★★★】</h2>
+<h3 id="_10">背景</h3>
+<p>ECサイトの顧客サポートを自動化するエージェントを開発します。注文確認、配送状況、返品対応など、幅広い問い合わせに対応する必要があります。</p>
+<h3 id="_11">要件</h3>
+<ol>
+<li><strong>顧客対応機能</strong></li>
+<li>注文状況の確認</li>
+<li>配送追跡</li>
+<li>返品・交換の受付</li>
+<li>商品に関する質問への回答</li>
+<li>
+<p>クレーム対応（一次対応）</p>
+</li>
+<li>
+<p><strong>システム連携</strong></p>
+</li>
+<li>注文管理システム</li>
+<li>配送業者API</li>
+<li>商品データベース</li>
+<li>
+<p>CRMシステム</p>
+</li>
+<li>
+<p><strong>高度な機能</strong></p>
+</li>
+<li>感情分析による適切な対応</li>
+<li>多言語対応（日本語・英語）</li>
+<li>優先度判定とエスカレーション</li>
+<li>対応履歴の記録と分析</li>
+</ol>
+<h3 id="_12">アーキテクチャ設計</h3>
+<pre><code class="language-mermaid">graph TB
+    A[顧客] --&gt; B[AIエージェント]
+    B --&gt; C[感情分析]
+    B --&gt; D[意図分類]
+    D --&gt; E[注文確認]
+    D --&gt; F[配送追跡]
+    D --&gt; G[返品処理]
+    D --&gt; H[商品問い合わせ]
+    E --&gt; I[注文DB]
+    F --&gt; J[配送API]
+    G --&gt; K[返品システム]
+    H --&gt; L[商品DB]
+    B --&gt; M[エスカレーション判定]
+    M --&gt; N[人間のオペレーター]
+</code></pre>
+<h3 id="_13">実装の重要ポイント</h3>
+<pre><code class="language-python"># エージェントの感情対応
+class EmotionalResponseHandler:
+    def analyze_emotion(self, text: str) -&gt; str:
+        &quot;&quot;&quot;
+        顧客の感情を分析
+        &quot;&quot;&quot;
+        # 実装例
+        keywords = {
+            &quot;anger&quot;: [&quot;怒&quot;, &quot;最悪&quot;, &quot;ひどい&quot;, &quot;許せない&quot;],
+            &quot;frustration&quot;: [&quot;困った&quot;, &quot;わからない&quot;, &quot;できない&quot;],
+            &quot;satisfaction&quot;: [&quot;ありがとう&quot;, &quot;助かった&quot;, &quot;素晴らしい&quot;]
+        }
+
+        # 感情スコアを計算
+        emotion_scores = self.calculate_emotion_scores(text, keywords)
+        return max(emotion_scores, key=emotion_scores.get)
+
+    def generate_response(self, emotion: str, content: str) -&gt; str:
+        &quot;&quot;&quot;
+        感情に応じた応答を生成
+        &quot;&quot;&quot;
+        templates = {
+            &quot;anger&quot;: &quot;大変申し訳ございません。お客様のお気持ち、重く受け止めております。{content}&quot;,
+            &quot;frustration&quot;: &quot;お困りのこと、承知いたしました。{content}&quot;,
+            &quot;satisfaction&quot;: &quot;お役に立てて嬉しいです。{content}&quot;
+        }
+
+        return templates.get(emotion, &quot;{content}&quot;).format(content=content)
+</code></pre>
+<h3 id="_14">マルチエージェント構成</h3>
+<pre><code class="language-yaml"># 専門エージェントの定義
+agents:
+  - name: order_specialist
+    role: 注文関連の問い合わせ専門
+    skills:
+      - 注文検索
+      - 注文変更
+      - キャンセル処理
+
+  - name: shipping_specialist
+    role: 配送関連の問い合わせ専門
+    skills:
+      - 配送状況確認
+      - 配送日時変更
+      - 配送業者連携
+
+  - name: product_specialist
+    role: 商品関連の問い合わせ専門
+    skills:
+      - 商品仕様説明
+      - 在庫確認
+      - 類似商品提案
+
+  - name: complaint_handler
+    role: クレーム対応専門
+    skills:
+      - 感情分析
+      - 問題解決提案
+      - エスカレーション判定
+</code></pre>
+<h3 id="_15">評価基準</h3>
+<ul>
+<li>[ ] 5種類以上の問い合わせタイプに対応</li>
+<li>[ ] 感情に応じた適切な対応</li>
+<li>[ ] システム連携が正しく機能</li>
+<li>[ ] エスカレーションの判断が適切</li>
+<li>[ ] 対応品質が一定以上（顧客満足度）</li>
+</ul>
+<hr />
+<h2 id="4">課題4: 統合業務支援エージェント 【難易度：★★★★】</h2>
+<h3 id="_16">背景</h3>
+<p>COBOLで構築された基幹システムと連携し、複数の業務プロセスを横断的に支援する統合エージェントを開発します。</p>
+<h3 id="_17">要件</h3>
+<ol>
+<li><strong>対応業務範囲</strong></li>
+<li>受注処理</li>
+<li>在庫管理</li>
+<li>請求処理</li>
+<li>売上分析</li>
+<li>
+<p>予算管理</p>
+</li>
+<li>
+<p><strong>COBOL連携</strong></p>
+</li>
+<li>バッチジョブの実行監視</li>
+<li>データ変換（EBCDIC ↔ UTF-8）</li>
+<li>トランザクション管理</li>
+<li>
+<p>エラーリカバリー</p>
+</li>
+<li>
+<p><strong>高度な分析機能</strong></p>
+</li>
+<li>売上予測</li>
+<li>異常検知</li>
+<li>最適化提案</li>
+<li>What-if分析</li>
+</ol>
+<h3 id="_18">実装チャレンジ</h3>
+<pre><code class="language-python"># COBOL連携アダプター
+class COBOLAdapter:
+    def __init__(self):
+        self.encoding = 'cp939'  # EBCDIC Japanese
+
+    def call_cobol_program(self, program_name: str, params: dict) -&gt; dict:
+        &quot;&quot;&quot;
+        COBOLプログラムを呼び出し
+        &quot;&quot;&quot;
+        # パラメータをCOBOL形式に変換
+        cobol_params = self.convert_to_cobol_format(params)
+
+        # JCL生成
+        jcl = self.generate_jcl(program_name, cobol_params)
+
+        # ジョブ実行
+        job_id = self.submit_job(jcl)
+
+        # 結果待機
+        result = self.wait_for_job(job_id)
+
+        # 結果をPython形式に変換
+        return self.convert_from_cobol_format(result)
+
+    def convert_to_cobol_format(self, data: dict) -&gt; bytes:
+        &quot;&quot;&quot;
+        PythonデータをCOBOLレイアウトに変換
+        &quot;&quot;&quot;
+        # 固定長レコードの生成
+        record = &quot;&quot;
+        for field, value in data.items():
+            if isinstance(value, str):
+                # 文字フィールド（右側空白埋め）
+                record += value.ljust(self.field_lengths[field])
+            elif isinstance(value, int):
+                # 数値フィールド（左側ゼロ埋め）
+                record += str(value).zfill(self.field_lengths[field])
+
+        return record.encode(self.encoding)
+</code></pre>
+<h3 id="_19">統合ワークフロー</h3>
+<pre><code class="language-yaml"># 月次決算支援ワークフロー
+workflow:
+  name: monthly_closing_assistant
+
+  steps:
+    - name: データ収集
+      agents:
+        - sales_data_collector
+        - inventory_checker
+        - ar_ap_collector
+
+    - name: データ検証
+      agents:
+        - data_validator
+        - anomaly_detector
+
+    - name: 集計処理
+      agents:
+        - aggregation_processor
+        - cobol_batch_runner
+
+    - name: レポート生成
+      agents:
+        - report_generator
+        - visualization_creator
+
+    - name: 承認フロー
+      agents:
+        - approval_coordinator
+        - notification_sender
+</code></pre>
+<h3 id="_20">評価基準</h3>
+<ul>
+<li>[ ] 5つ以上の業務プロセスに対応</li>
+<li>[ ] COBOL連携が安定して動作</li>
+<li>[ ] エラー処理とリカバリーが適切</li>
+<li>[ ] パフォーマンスが実用レベル</li>
+<li>[ ] 監査証跡が適切に記録される</li>
+</ul>
+<hr />
+<h2 id="_21">提出方法</h2>
+<p>各課題の成果物として、以下を提出してください：</p>
+<ol>
+<li><strong>設計書</strong></li>
+<li>エージェントアーキテクチャ図</li>
+<li>データフロー図</li>
+<li>
+<p>API仕様書</p>
+</li>
+<li>
+<p><strong>実装コード</strong></p>
+</li>
+<li>エージェント定義（YAML）</li>
+<li>ツール実装（Python）</li>
+<li>
+<p>テストコード</p>
+</li>
+<li>
+<p><strong>デモ動画</strong></p>
+</li>
+<li>エージェントの動作デモ（5分程度）</li>
+<li>
+<p>主要機能の説明</p>
+</li>
+<li>
+<p><strong>ドキュメント</strong></p>
+</li>
+<li>README.md</li>
+<li>運用手順書</li>
+<li>トラブルシューティングガイド</li>
+</ol>
+<hr />
+<h2 id="_22">評価のポイント</h2>
+<h3 id="_23">技術面</h3>
+<ul>
+<li>コードの品質（可読性、保守性）</li>
+<li>エラーハンドリング</li>
+<li>パフォーマンス</li>
+<li>セキュリティ考慮</li>
+</ul>
+<h3 id="_24">ビジネス面</h3>
+<ul>
+<li>要件の充足度</li>
+<li>ユーザビリティ</li>
+<li>実用性</li>
+<li>拡張性</li>
+</ul>
+<h3 id="_25">創造性</h3>
+<ul>
+<li>独自の工夫</li>
+<li>問題解決アプローチ</li>
+<li>UI/UXの改善</li>
+</ul>
+<hr />
+<h2 id="_26">追加リソース</h2>
+<h3 id="_27">参考ドキュメント</h3>
+<ul>
+<li><a href="https://www.ibm.com/docs/watsonx">Watsonx.orchestrate 公式ドキュメント</a></li>
+<li><a href="https://github.com/ibm/adk-examples">ADK開発ガイド</a></li>
+<li><a href="../watsonx_prompt_engineering/">プロンプトエンジニアリングベストプラクティス</a></li>
+</ul>
+<h3 id="_28">サンプルコード</h3>
+<ul>
+<li><a href="https://github.com/examples/basic-agent">基本的なエージェント実装例</a></li>
+<li><a href="https://github.com/examples/cobol-integration">COBOL連携サンプル</a></li>
+<li><a href="https://github.com/examples/multi-agent">マルチエージェントシステム</a></li>
+</ul>
+<hr />
+<h2 id="_29">まとめ</h2>
+<p>これらの課題を通じて、以下のスキルを身につけることができます：</p>
+<ol>
+<li><strong>AIエージェント設計</strong>: 要件から適切なエージェント構成を設計</li>
+<li><strong>プロンプトエンジニアリング</strong>: 効果的なプロンプトの作成</li>
+<li><strong>システム統合</strong>: 既存システムとの連携</li>
+<li><strong>実装スキル</strong>: ADK/WXOを使った開発</li>
+<li><strong>運用考慮</strong>: 本番環境での運用を意識した設計</li>
+</ol>
+<p>頑張って取り組んでください！質問があれば、遠慮なく講師に相談してください。</p>
+<hr />
+<p><a href="../watsonx_adk_to_wxo/">前へ ◀ ADKからWXOへのデプロイ</a>　｜　<a href="../../">トップへ戻る ▲</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

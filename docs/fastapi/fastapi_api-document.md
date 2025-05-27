@@ -42,11 +42,11 @@ def read_item(item_id: int, q: str = None):
 * APIの一覧が表示される
 * 「Try it out」ボタンで実際にAPIを試せる
 * パラメータの説明やレスポンス例も表示
-![Swagger UI](images/swagger_ui.png)
+![Swagger UI](../images/swagger_ui.png)
 
 ### Redoc の画面（例）
 
-![Redoc](images/redoc.png)
+![Redoc](../images/redoc.png)
 
 
 ---

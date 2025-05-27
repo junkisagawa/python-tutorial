@@ -32,28 +32,52 @@ theme:
 extra_css:
   - extra.css
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
 nav:
   - はじめに: index.md
   - Python基礎:
       - Pythonとは: python_intro.md
       - 環境セットアップ: python_env.md
-      - 変数と型: python_basic_variables.md
-      - 条件分岐: python_basic_if.md
-      - ループ: python_basic_loop.md
-      - 関数: python_basic_func.md
-      - コレクション（リスト・辞書・セット）: python_basic_collection.md
-      - ファイル操作: python_basic_file.md
-      - エラー処理: python_basic_error.md
+      - 変数と型: python/python_basic_variables.md
+      - 条件分岐: python/python_basic_if.md
+      - ループ: python/python_basic_loop.md
+      - 関数: python/python_basic_func.md
+      - コレクション（リスト・辞書・セット）: python/python_basic_collection.md
+      - ファイル操作: python/python_basic_file.md
+      - エラー処理: python/python_basic_error.md
+      - HTTPリクエスト: python/python_basic_http-requests.md
   - FastAPI入門:
-      - FastAPI概要: fastapi_intro.md
-      - API開発: fastapi_api.md
-      - APIドキュメントの自動生成: fastapi_api-document.md
-      - HTTPリクエスト: python_basic_http-requests.md
+      - FastAPI概要: fastapi/fastapi_intro.md
+      - API開発: fastapi/fastapi_api.md
+      - APIドキュメントの自動生成: fastapi/fastapi_api-document.md
+  - Watson X Orchestrate:
+      - Watson Xとは: watsonx/watsonx_intro.md
+      - AI・生成AIの基礎: watsonx/watsonx_ai_basics.md
+      - プロンプトエンジニアリング: watsonx/watsonx_prompt_engineering.md
+      - 環境構築: watsonx/watsonx_setup.md
+      - はじめてのエージェント: watsonx/watsonx_first_agent.md
+      - ツール開発: watsonx/watsonx_tools.md
+      - エージェント連携: watsonx/watsonx_collaboration.md
+      - 実践演習: watsonx/watsonx_practice.md
+      - ADKからWXOへのデプロイ: watsonx/watsonx_adk_to_wxo.md
+      - 課題演習: watsonx/watsonx_homework.md
+      - チャレンジ課題: watsonx/watsonx_challenge.md
   - Flask入門:
-      - Flask概要: flask_intro.md
-      - Flask API開発: flask_api.md
-      - DB連携: flask_db.md
-      - エラーハンドリング: flask_error.md
-  - まとめ: summary.md
-  - 追加課題: challenge.md
-  - 付録: appendix.md 
+      - Flask概要: flask/flask_intro.md
+      - Flask API開発: flask/flask_api.md
+      - DB連携: flask/flask_db.md
+      - エラーハンドリング: flask/flask_error.md
+  - まとめ: general/summary.md
+  - 追加課題: general/challenge.md
+  - 付録: general/appendix.md 

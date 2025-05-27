@@ -2,6 +2,9 @@
 
 ループは、「同じ処理を何度も繰り返す」仕組みです。繰り返しの処理が必要な場面で役立ちます。
 
+!!! info "COBOLプログラマーの皆様へ"
+    COBOLのPERFORM文に相当するのがPythonのループです。ただし、書き方や考え方にいくつか違いがあります。このページでは、COBOLとの比較を交えながら説明します。
+
 ---
 
 ## for文の基本
@@ -26,6 +29,22 @@ for i in range(5):
 * `range(5)`は0から4までの数値を順番に作成します。
 * 作成された数値は変数`i`に順番に代入されます。
 
+### COBOLとの比較
+
+```cobol
+* COBOLでの同等の処理
+PERFORM VARYING WS-I FROM 0 BY 1 UNTIL WS-I >= 5
+    DISPLAY WS-I
+END-PERFORM.
+```
+
+| 特徴 | COBOL | Python |
+|------|-------|--------|
+| 繰り返し方法 | PERFORM文 | for文、while文 |
+| カウンタ変数 | 事前に宣言が必要 | forループで自動生成可能 |
+| 範囲指定 | FROM...BY...UNTIL | range()関数 |
+| 終了条件 | UNTIL条件を明示 | range()で自動的に決定 |
+
 ---
 
 ## リストを使ったループ
@@ -37,6 +56,20 @@ fruits = ["りんご", "バナナ", "みかん"]
 for fruit in fruits:
     print(fruit)
 ```
+
+!!! note "COBOLとの違い"
+    COBOLでは配列（TABLE）の要素を処理する場合、インデックスを使って参照しますが、Pythonでは直接要素を取り出せます。
+    
+    ```cobol
+    * COBOLの例
+    01 FRUIT-TABLE.
+       05 FRUITS OCCURS 3 TIMES PIC X(10).
+    01 WS-INDEX PIC 9.
+    
+    PERFORM VARYING WS-INDEX FROM 1 BY 1 UNTIL WS-INDEX > 3
+        DISPLAY FRUITS(WS-INDEX)
+    END-PERFORM.
+    ```
 
 このコードは以下を表示します。
 
