@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../watsonx_prompt_engineering/">
+        <link rel="prev" href="../watsonx_intro/">
       
       
-        <link rel="next" href="../watsonx_first_agent/">
+        <link rel="next" href="../watsonx_ai_basics/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>環境構築 - Python & Flask トレーニング</title>
+        <title>ADKの基礎 - Python & Flask トレーニング</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#watson-x-orchestrate" class="md-skip">
+        <a href="#adkagent-development-kit" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              環境構築
+              ADKの基礎
             
           </span>
         </div>
@@ -886,10 +886,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../watsonx_adk_basics/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ADKの基礎
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -900,6 +922,320 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      はじめに
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adk" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADKって何？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADKって何？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adk_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADKの基本概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adk3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADKの3つの主要コンポーネント
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#watsonx-orchestrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      watsonx Orchestrateとの関係
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="watsonx Orchestrateとの関係">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      全体像の理解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      関係性の詳細
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cobol" class="md-nav__link">
+    <span class="md-ellipsis">
+      COBOLとの類推
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      他社のAgentフレームワークとの比較
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="他社のAgentフレームワークとの比較">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      主要なAgentフレームワーク
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      フレームワーク比較表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      各フレームワークの詳細比較
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="各フレームワークの詳細比較">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-langchainlanggraph" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. LangChain/LangGraph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-crewai" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. CrewAI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-microsoft-autogen" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Microsoft AutoGen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adk_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADKの独自の強み
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      他社フレームワークとの連携可能性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="他社フレームワークとの連携可能性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenAPIを通じた統合
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      統合パターン
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      統合の実践例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adk_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADKを選ぶべき理由
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADKを選ぶべき理由">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. エンタープライズ対応
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 日本市場への対応
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 統合エコシステム
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      まとめ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="まとめ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adk_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADKの位置づけ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      フレームワーク選択のガイドライン
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      次のステップ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -955,32 +1291,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    環境構築
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../watsonx_setup/" class="md-nav__link">
         
   
   
@@ -991,416 +1305,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      このページで学ぶこと
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      必要なもの
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="必要なもの">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. システム要件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. ソフトウェア要件
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ1: Pythonの確認とインストール
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ステップ1: Pythonの確認とインストール">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pythonがインストールされているか確認
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pythonがない場合のインストール
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ2: Dockerのインストール
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ステップ2: Dockerのインストール">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mac" class="md-nav__link">
-    <span class="md-ellipsis">
-      Macの場合
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windowsの場合
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      インストール確認
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-watson-x-orchestrate-adk" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ3: Watson X Orchestrate ADKのインストール
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ステップ3: Watson X Orchestrate ADKのインストール">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      仮想環境の作成（推奨）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adk" class="md-nav__link">
-    <span class="md-ellipsis">
-      ADKのインストール
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      インストール確認
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ4: 環境設定ファイルの作成
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ステップ4: 環境設定ファイルの作成">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#env" class="md-nav__link">
-    <span class="md-ellipsis">
-      .envファイルの作成
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ5: ローカルサーバーの起動
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ステップ5: ローカルサーバーの起動">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      サーバーを起動
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      成功すると表示されるメッセージ
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      サーバーの停止
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ6: 動作確認
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ステップ6: 動作確認">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      環境のアクティベート
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      ヘルスチェック
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      トラブルシューティング
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="トラブルシューティング">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      よくある問題と解決方法
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="よくある問題と解決方法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-python_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Pythonのバージョンが古い
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-docker_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Dockerが起動していない
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. ポートが使用中
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      練習問題
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="練習問題">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      問題1: 環境確認スクリプトの作成
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      解答
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      宿題
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="宿題">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      課題1: 環境構築ドキュメントの作成
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-docker_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      課題2: Dockerコンテナの理解
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      まとめ
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1809,101 +1713,59 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      このページで学ぶこと
+      はじめに
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#adk" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADKって何？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADKって何？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adk_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADKの基本概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adk3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADKの3つの主要コンポーネント
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#watsonx-orchestrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      watsonx Orchestrateとの関係
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="watsonx Orchestrateとの関係">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      必要なもの
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="必要なもの">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. システム要件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. ソフトウェア要件
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ1: Pythonの確認とインストール
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ステップ1: Pythonの確認とインストール">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pythonがインストールされているか確認
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pythonがない場合のインストール
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ2: Dockerのインストール
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ステップ2: Dockerのインストール">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mac" class="md-nav__link">
-    <span class="md-ellipsis">
-      Macの場合
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windowsの場合
+      全体像の理解
     </span>
   </a>
   
@@ -1912,7 +1774,16 @@
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      インストール確認
+      関係性の詳細
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cobol" class="md-nav__link">
+    <span class="md-ellipsis">
+      COBOLとの類推
     </span>
   </a>
   
@@ -1924,28 +1795,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-watson-x-orchestrate-adk" class="md-nav__link">
+  <a href="#agent" class="md-nav__link">
     <span class="md-ellipsis">
-      ステップ3: Watson X Orchestrate ADKのインストール
+      他社のAgentフレームワークとの比較
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="ステップ3: Watson X Orchestrate ADKのインストール">
+    <nav class="md-nav" aria-label="他社のAgentフレームワークとの比較">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#agent_1" class="md-nav__link">
     <span class="md-ellipsis">
-      仮想環境の作成（推奨）
+      主要なAgentフレームワーク
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adk" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      ADKのインストール
+      フレームワーク比較表
     </span>
   </a>
   
@@ -1954,7 +1825,49 @@
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      インストール確認
+      各フレームワークの詳細比較
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="各フレームワークの詳細比較">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-langchainlanggraph" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. LangChain/LangGraph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-crewai" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. CrewAI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-microsoft-autogen" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Microsoft AutoGen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adk_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADKの独自の強み
     </span>
   </a>
   
@@ -1966,43 +1879,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ4: 環境設定ファイルの作成
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ステップ4: 環境設定ファイルの作成">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#env" class="md-nav__link">
-    <span class="md-ellipsis">
-      .envファイルの作成
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ5: ローカルサーバーの起動
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ステップ5: ローカルサーバーの起動">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      サーバーを起動
+      他社フレームワークとの連携可能性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="他社フレームワークとの連携可能性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenAPIを通じた統合
     </span>
   </a>
   
@@ -2011,7 +1900,7 @@
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      成功すると表示されるメッセージ
+      統合パターン
     </span>
   </a>
   
@@ -2020,7 +1909,7 @@
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      サーバーの停止
+      統合の実践例
     </span>
   </a>
   
@@ -2032,71 +1921,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+  <a href="#adk_3" class="md-nav__link">
     <span class="md-ellipsis">
-      ステップ6: 動作確認
+      ADKを選ぶべき理由
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="ステップ6: 動作確認">
+    <nav class="md-nav" aria-label="ADKを選ぶべき理由">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      環境のアクティベート
+      1. エンタープライズ対応
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      ヘルスチェック
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      トラブルシューティング
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="トラブルシューティング">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      よくある問題と解決方法
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="よくある問題と解決方法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-python_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Pythonのバージョンが古い
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-docker_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Dockerが起動していない
+      2. 日本市場への対応
     </span>
   </a>
   
@@ -2105,45 +1951,7 @@
           <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      3. ポートが使用中
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      練習問題
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="練習問題">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      問題1: 環境確認スクリプトの作成
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      解答
+      3. 統合エコシステム
     </span>
   </a>
   
@@ -2155,44 +1963,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      宿題
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="宿題">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      課題1: 環境構築ドキュメントの作成
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-docker_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      課題2: Dockerコンテナの理解
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       まとめ
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="まとめ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adk_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADKの位置づけ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      フレームワーク選択のガイドライン
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      次のステップ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2212,213 +2020,387 @@
 
 
 
-<h1 id="watson-x-orchestrate">Watson X Orchestrate 開発環境のセットアップ<a class="headerlink" href="#watson-x-orchestrate" title="Permanent link">&para;</a></h1>
-<h2 id="_1">このページで学ぶこと<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Watson X Orchestrateの開発環境を構築します。COBOLの開発環境構築とは違い、いくつかのツールをインストールする必要がありますが、一つずつ丁寧に説明します。</p>
-<h2 id="_2">必要なもの<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="1">1. システム要件<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h1 id="adkagent-development-kit">ADK（Agent Development Kit）とは<a class="headerlink" href="#adkagent-development-kit" title="Permanent link">&para;</a></h1>
+<h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>このセクションでは、watsonx Orchestrateの中核となるADK（Agent Development Kit）について、初心者にもわかりやすく解説します。</p>
+<div class="admonition info">
+<p class="admonition-title">このページで学べること</p>
 <ul>
-<li><strong>メモリ</strong>: 16GB以上（COBOLプログラムより多く必要です）</li>
-<li><strong>CPU</strong>: 8コア以上</li>
-<li><strong>ディスク容量</strong>: 25GB以上の空き容量</li>
-<li><strong>OS</strong>: Windows、Mac、またはLinux</li>
+<li>ADKの基本概念と役割</li>
+<li>watsonx Orchestrateとの関係性</li>
+<li>他社のAgentフレームワークとの比較</li>
+<li>ADKを選ぶべき理由</li>
 </ul>
-<h3 id="2">2. ソフトウェア要件<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+</div>
+<hr />
+<h2 id="adk">ADKって何？<a class="headerlink" href="#adk" title="Permanent link">&para;</a></h2>
+<h3 id="adk_1">ADKの基本概念<a class="headerlink" href="#adk_1" title="Permanent link">&para;</a></h3>
+<p>ADK（Agent Development Kit）は、<strong>AIエージェントとツールを開発するための包括的な開発キット</strong>です。</p>
+<p>COBOLプログラマーの皆さんに馴染みのある概念で説明すると：</p>
+<div class="highlight"><pre><span></span><code><span class="c">* COBO</span><span class="nv">L</span><span class="err">の場合</span>
+<span class="c">IDENTI</span><span class="nv">FICATION</span><span class="w"> </span><span class="kr">DIVISION</span><span class="p">.</span>
+<span class="c">PROGRA</span><span class="nv">M-ID</span><span class="p">.</span><span class="w"> </span><span class="nv">BATCH-PROCESS</span><span class="p">.</span>
+
+<span class="c">* ADKの</span><span class="err">場合</span>
+<span class="c">エージェント</span><span class="err">名</span><span class="p">:</span><span class="w"> </span><span class="err">データ処理エージェント</span>
+<span class="c">役割: バッ</span><span class="err">チ処理の自動化と最適化</span>
+</code></pre></div>
+<h3 id="adk3">ADKの3つの主要コンポーネント<a class="headerlink" href="#adk3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>graph TB
+    A[ADK] --&gt; B[エージェント&lt;br/&gt;Agent]
+    A --&gt; C[ツール&lt;br/&gt;Tool]
+    A --&gt; D[CLI&lt;br/&gt;コマンドツール]
+
+    B --&gt; B1[他のエージェントを使える]
+    B --&gt; B2[複雑なタスクを分解]
+    B --&gt; B3[ユーザーの代わりに作業]
+
+    C --&gt; C1[特定のアクションを実行]
+    C --&gt; C2[情報を取得]
+    C --&gt; C3[複数の形式に対応]
+
+    D --&gt; D1[エージェントの作成]
+    D --&gt; D2[ツールの管理]
+    D --&gt; D3[デプロイメント]
+</code></pre></div>
+<hr />
+<h2 id="watsonx-orchestrate">watsonx Orchestrateとの関係<a class="headerlink" href="#watsonx-orchestrate" title="Permanent link">&para;</a></h2>
+<h3 id="_2">全体像の理解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>graph LR
+    subgraph 開発環境
+        A[ADK&lt;br/&gt;開発キット] --&gt; B[エージェント&lt;br/&gt;開発]
+        A --&gt; C[ツール&lt;br/&gt;開発]
+    end
+
+    subgraph 実行環境
+        D[watsonx&lt;br/&gt;Orchestrate] --&gt; E[エージェント&lt;br/&gt;実行]
+        D --&gt; F[ツール&lt;br/&gt;実行]
+        D --&gt; G[ユーザー&lt;br/&gt;インターフェース]
+    end
+
+    B --&gt; E
+    C --&gt; F
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#9ff,stroke:#333,stroke-width:2px
+</code></pre></div>
+<h3 id="_3">関係性の詳細<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>ADK</th>
+<th>watsonx Orchestrate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>役割</strong></td>
+<td>開発環境</td>
+<td>実行環境</td>
+</tr>
+<tr>
+<td><strong>主な機能</strong></td>
+<td>エージェント・ツールの作成</td>
+<td>エージェント・ツールの実行</td>
+</tr>
+<tr>
+<td><strong>利用者</strong></td>
+<td>開発者</td>
+<td>エンドユーザー</td>
+</tr>
+<tr>
+<td><strong>アクセス方法</strong></td>
+<td>CLI、Python SDK</td>
+<td>Web UI、API</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cobol">COBOLとの類推<a class="headerlink" href="#cobol" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>COBOL開発環境 : COBOLコンパイラ = ADK : watsonx Orchestrate
+</code></pre></div>
 <ul>
-<li>Python 3.11以上（3.13まで対応）</li>
-<li>Docker（コンテナ技術）</li>
-<li>テキストエディタ（VS Code推奨）</li>
+<li><strong>COBOL開発環境</strong>でプログラムを書く → <strong>ADK</strong>でエージェントを開発</li>
+<li><strong>COBOLコンパイラ</strong>で実行可能にする → <strong>watsonx Orchestrate</strong>で実行</li>
 </ul>
-<h2 id="1-python">ステップ1: Pythonの確認とインストール<a class="headerlink" href="#1-python" title="Permanent link">&para;</a></h2>
-<h3 id="python">Pythonがインストールされているか確認<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
-<p>ターミナル（コマンドプロンプト）を開いて、以下のコマンドを実行します：</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>--version
+<hr />
+<h2 id="agent">他社のAgentフレームワークとの比較<a class="headerlink" href="#agent" title="Permanent link">&para;</a></h2>
+<h3 id="agent_1">主要なAgentフレームワーク<a class="headerlink" href="#agent_1" title="Permanent link">&para;</a></h3>
+<p>AIエージェント開発の世界では、様々なフレームワークが存在します。それぞれの特徴を理解することで、ADKの位置づけがより明確になります。</p>
+<h3 id="_4">フレームワーク比較表<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>フレームワーク</th>
+<th>開発元</th>
+<th>特徴</th>
+<th>難易度</th>
+<th>企業向け</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ADK</strong></td>
+<td>IBM</td>
+<td>エンタープライズ対応、高信頼性</td>
+<td>★★★☆☆</td>
+<td>◎</td>
+</tr>
+<tr>
+<td><strong>LangChain/LangGraph</strong></td>
+<td>LangChain社</td>
+<td>柔軟性高、複雑なワークフロー</td>
+<td>★★★★☆</td>
+<td>○</td>
+</tr>
+<tr>
+<td><strong>CrewAI</strong></td>
+<td>CrewAI社</td>
+<td>簡単、迅速なプロトタイピング</td>
+<td>★★☆☆☆</td>
+<td>△</td>
+</tr>
+<tr>
+<td><strong>AutoGen</strong></td>
+<td>Microsoft</td>
+<td>エンタープライズ向け、堅牢</td>
+<td>★★★★☆</td>
+<td>◎</td>
+</tr>
+<tr>
+<td><strong>AutoGPT</strong></td>
+<td>オープンソース</td>
+<td>先駆的、実験的</td>
+<td>★★★☆☆</td>
+<td>△</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">各フレームワークの詳細比較<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h4 id="1-langchainlanggraph">1. LangChain/LangGraph<a class="headerlink" href="#1-langchainlanggraph" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># LangGraphの例</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langgraph</span><span class="w"> </span><span class="kn">import</span> <span class="n">StateGraph</span>
+
+<span class="n">graph</span> <span class="o">=</span> <span class="n">StateGraph</span><span class="p">()</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;agent1&quot;</span><span class="p">,</span> <span class="n">agent1_function</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s2">&quot;start&quot;</span><span class="p">,</span> <span class="s2">&quot;agent1&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>または</p>
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>--version
+<p><strong>強み</strong>：
+- グラフベースの複雑なワークフロー構築
+- 高度なカスタマイズが可能
+- 大規模なコミュニティ</p>
+<p><strong>弱み</strong>：
+- 学習曲線が急
+- 単純なタスクには過剰</p>
+<h4 id="2-crewai">2. CrewAI<a class="headerlink" href="#2-crewai" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># CrewAIの例</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">crewai</span><span class="w"> </span><span class="kn">import</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">Task</span><span class="p">,</span> <span class="n">Crew</span>
+
+<span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+    <span class="n">role</span><span class="o">=</span><span class="s1">&#39;データアナリスト&#39;</span><span class="p">,</span>
+    <span class="n">goal</span><span class="o">=</span><span class="s1">&#39;売上データを分析する&#39;</span><span class="p">,</span>
+    <span class="n">backstory</span><span class="o">=</span><span class="s1">&#39;経験豊富なアナリスト&#39;</span>
+<span class="p">)</span>
 </code></pre></div>
-<p>結果が <code>Python 3.11.x</code> 以上なら問題ありません。</p>
-<h3 id="python_1">Pythonがない場合のインストール<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h3>
+<p><strong>強み</strong>：
+- 非常に簡単に始められる
+- 優れたドキュメント
+- 迅速なプロトタイピング</p>
+<p><strong>弱み</strong>：
+- カスタマイズ性に制限
+- エンタープライズ機能が不足</p>
+<h4 id="3-microsoft-autogen">3. Microsoft AutoGen<a class="headerlink" href="#3-microsoft-autogen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># AutoGenの例</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">autogen</span><span class="w"> </span><span class="kn">import</span> <span class="n">AssistantAgent</span><span class="p">,</span> <span class="n">UserProxyAgent</span>
+
+<span class="n">assistant</span> <span class="o">=</span> <span class="n">AssistantAgent</span><span class="p">(</span><span class="s2">&quot;assistant&quot;</span><span class="p">)</span>
+<span class="n">user_proxy</span> <span class="o">=</span> <span class="n">UserProxyAgent</span><span class="p">(</span><span class="s2">&quot;user_proxy&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>強み</strong>：
+- エンタープライズ向け機能充実
+- 高い信頼性とエラーハンドリング
+- Microsoftのサポート</p>
+<p><strong>弱み</strong>：
+- セットアップが複雑
+- 最新のLLMが必要</p>
+<h3 id="adk_2">ADKの独自の強み<a class="headerlink" href="#adk_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>graph TB
+    subgraph ADKの強み
+        A[IBMエコシステム統合] 
+        B[エンタープライズセキュリティ]
+        C[日本語サポート充実]
+        D[watsonx統合]
+        E[プロダクション対応]
+    end
+
+    A --&gt; F[既存IBMシステムとの連携]
+    B --&gt; G[監査・コンプライアンス対応]
+    C --&gt; H[日本語ドキュメント・サポート]
+    D --&gt; I[watsonxサービス群との統合]
+    E --&gt; J[スケーラビリティ・可用性]
+</code></pre></div>
+<hr />
+<h2 id="_6">他社フレームワークとの連携可能性<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="openapi">OpenAPIを通じた統合<a class="headerlink" href="#openapi" title="Permanent link">&para;</a></h3>
+<p>watsonx Orchestrateは、OpenAPI仕様に準拠したツールをインポートできるため、理論的には他のフレームワークで作成したツールも統合可能です。</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># OpenAPI仕様の例</span>
+<span class="nt">openapi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.0.0</span>
+<span class="nt">info</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">外部エージェントAPI</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span>
+<span class="nt">paths</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">/agent/execute</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">post</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">エージェントの実行</span>
+<span class="w">      </span><span class="nt">requestBody</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">content</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">application/json</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">schema</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">              </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">query</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+</code></pre></div>
+<h3 id="_7">統合パターン<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>graph LR
+    subgraph 他社フレームワーク
+        A[LangChain&lt;br/&gt;エージェント]
+        B[CrewAI&lt;br/&gt;エージェント]
+        C[AutoGen&lt;br/&gt;エージェント]
+    end
+
+    subgraph 統合レイヤー
+        D[API Gateway]
+        E[OpenAPI&lt;br/&gt;アダプター]
+    end
+
+    subgraph watsonx Orchestrate
+        F[外部ツール&lt;br/&gt;として登録]
+        G[ADK&lt;br/&gt;エージェント]
+        H[統合実行]
+    end
+
+    A --&gt; D
+    B --&gt; D
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    F --&gt; H
+    G --&gt; H
+</code></pre></div>
+<h3 id="_8">統合の実践例<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 外部エージェントをwatsonx Orchestrateで使う例</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">adk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tool</span><span class="p">,</span> <span class="n">Agent</span>
+
+<span class="c1"># 外部エージェントをツールとしてラップ</span>
+<span class="n">external_agent_tool</span> <span class="o">=</span> <span class="n">Tool</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;langchain_analyzer&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;LangChainで作成した分析エージェント&quot;</span><span class="p">,</span>
+    <span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;https://api.example.com/langchain/analyze&quot;</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">},</span>
+            <span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1"># ADKエージェントから外部ツールを利用</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">HybridAgent</span><span class="p">(</span><span class="n">Agent</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;hybrid_agent&quot;</span><span class="p">,</span>
+            <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="n">external_agent_tool</span><span class="p">]</span>
+        <span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">):</span>
+        <span class="c1"># 外部エージェントを活用</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_tool</span><span class="p">(</span>
+            <span class="s2">&quot;langchain_analyzer&quot;</span><span class="p">,</span>
+            <span class="p">{</span><span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">}</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+<hr />
+<h2 id="adk_3">ADKを選ぶべき理由<a class="headerlink" href="#adk_3" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. エンタープライズ対応<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>graph TB
+    A[エンタープライズ要件] --&gt; B[セキュリティ]
+    A --&gt; C[スケーラビリティ]
+    A --&gt; D[監査対応]
+    A --&gt; E[SLA保証]
+
+    B --&gt; F[ADKが提供]
+    C --&gt; F
+    D --&gt; F
+    E --&gt; F
+</code></pre></div>
+<h3 id="2">2. 日本市場への対応<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>日本語ドキュメント</strong>：充実した日本語資料</li>
+<li><strong>ローカルサポート</strong>：日本のIBMチームによるサポート</li>
+<li><strong>日本の規制対応</strong>：国内コンプライアンス要件への対応</li>
+</ul>
+<h3 id="3">3. 統合エコシステム<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">watsonxエコシステム</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">watsonx.ai</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AI基盤モデル</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">watsonx.data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">データ管理</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">watsonx.governance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AIガバナンス</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">watsonx Orchestrate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">エージェント実行環境</span>
+
+<span class="nt">ADKの役割</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">上記すべてとシームレスに統合</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">統一されたセキュリティモデル</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">共通の管理インターフェース</span>
+</code></pre></div>
+<hr />
+<h2 id="_9">まとめ<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="adk_4">ADKの位置づけ<a class="headerlink" href="#adk_4" title="Permanent link">&para;</a></h3>
+<p>ADKは、エンタープライズ向けのAIエージェント開発において、以下の特徴を持つ強力なツールキットです：</p>
 <ol>
-<li><a href="https://www.python.org/downloads/">Python公式サイト</a>にアクセス</li>
-<li>「Download Python 3.12.x」をクリック</li>
-<li>インストーラーを実行</li>
-<li><strong>重要</strong>: 「Add Python to PATH」にチェックを入れる</li>
+<li><strong>開発から実行まで</strong>：ADKで開発し、watsonx Orchestrateで実行</li>
+<li><strong>エンタープライズ対応</strong>：セキュリティ、スケーラビリティ、監査対応</li>
+<li><strong>統合性</strong>：他のwatsonxサービスとのシームレスな統合</li>
+<li><strong>柔軟性</strong>：他社フレームワークとの連携も可能</li>
 </ol>
-<h2 id="2-docker">ステップ2: Dockerのインストール<a class="headerlink" href="#2-docker" title="Permanent link">&para;</a></h2>
-<p>Dockerは「アプリケーションをコンテナという箱に入れて動かす技術」です。COBOLで例えると、JCL（Job Control Language）のような役割を果たします。</p>
-<h3 id="mac">Macの場合<a class="headerlink" href="#mac" title="Permanent link">&para;</a></h3>
-<ol>
-<li><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop for Mac</a>をダウンロード</li>
-<li>インストーラーを実行</li>
-<li>Dockerを起動</li>
-</ol>
-<p>または、Homebrewを使用：</p>
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>docker
-</code></pre></div>
-<h3 id="windows">Windowsの場合<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
-<ol>
-<li><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop for Windows</a>をダウンロード</li>
-<li>インストーラーを実行</li>
-<li>必要に応じてWSL2をセットアップ</li>
-<li>Dockerを起動</li>
-</ol>
-<h3 id="_3">インストール確認<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>--version
-</code></pre></div>
-<h2 id="3-watson-x-orchestrate-adk">ステップ3: Watson X Orchestrate ADKのインストール<a class="headerlink" href="#3-watson-x-orchestrate-adk" title="Permanent link">&para;</a></h2>
-<h3 id="_4">仮想環境の作成（推奨）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>Pythonの仮想環境は、COBOLで言うところの「専用ライブラリ」のようなものです。プロジェクトごとに独立した環境を作ります。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># 作業ディレクトリを作成</span>
-mkdir<span class="w"> </span>watsonx-tutorial
-<span class="nb">cd</span><span class="w"> </span>watsonx-tutorial
-
-<span class="c1"># 仮想環境を作成</span>
-python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
-
-<span class="c1"># 仮想環境を有効化（Mac/Linux）</span>
-<span class="nb">source</span><span class="w"> </span>venv/bin/activate
-
-<span class="c1"># 仮想環境を有効化（Windows）</span>
-venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
-</code></pre></div>
-<h3 id="adk">ADKのインストール<a class="headerlink" href="#adk" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>ibm-watsonx-orchestrate
-</code></pre></div>
-<h3 id="_5">インストール確認<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>orchestrate<span class="w"> </span>--version
-</code></pre></div>
-<h2 id="4">ステップ4: 環境設定ファイルの作成<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<h3 id="env">.envファイルの作成<a class="headerlink" href="#env" title="Permanent link">&para;</a></h3>
-<p>プロジェクトディレクトリに<code>.env</code>ファイルを作成します：</p>
-<div class="highlight"><pre><span></span><code>touch<span class="w"> </span>.env
-</code></pre></div>
-<p>以下の内容を<code>.env</code>ファイルに記述：</p>
-<div class="highlight"><pre><span></span><code># Watson X Orchestrate設定
-ORCHESTRATE_DEV_MODE=true
-ORCHESTRATE_LOG_LEVEL=INFO
-
-# LLMモデル設定（ローカル開発用）
-LLM_PROVIDER=local
-LLM_MODEL=mock
-
-# ポート設定
-ORCHESTRATE_PORT=8080
-</code></pre></div>
-<p>💡 <strong>COBOLプログラマーへの説明</strong>：
-<code>.env</code>ファイルは、COBOLの環境変数設定ファイルのようなものです。プログラムの動作に必要な設定値を記述します。</p>
-<h2 id="5">ステップ5: ローカルサーバーの起動<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<h3 id="_6">サーバーを起動<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>orchestrate<span class="w"> </span>server<span class="w"> </span>start<span class="w"> </span>-e<span class="w"> </span>.env
-</code></pre></div>
-<h3 id="_7">成功すると表示されるメッセージ<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>🚀 Watson X Orchestrate server is starting...
-✅ Server started successfully on http://localhost:8080
-📝 Logs are available at: ./logs/orchestrate.log
-</code></pre></div>
-<h3 id="_8">サーバーの停止<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>別のターミナルウィンドウで：</p>
-<div class="highlight"><pre><span></span><code>orchestrate<span class="w"> </span>server<span class="w"> </span>stop
-</code></pre></div>
-<h2 id="6">ステップ6: 動作確認<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
-<h3 id="_9">環境のアクティベート<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>orchestrate<span class="w"> </span>env<span class="w"> </span>activate<span class="w"> </span><span class="nb">local</span>
-</code></pre></div>
-<h3 id="_10">ヘルスチェック<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://localhost:8080/health
-</code></pre></div>
-<p>正常な応答：
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;healthy&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">}</span>
-</code></pre></div></p>
-<h2 id="_11">トラブルシューティング<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<h3 id="_12">よくある問題と解決方法<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<h4 id="1-python_1">1. Pythonのバージョンが古い<a class="headerlink" href="#1-python_1" title="Permanent link">&para;</a></h4>
-<p><div class="highlight"><pre><span></span><code>エラー: Python 3.11以上が必要です
-</code></pre></div>
-<strong>解決方法</strong>: Pythonを最新版にアップデート</p>
-<h4 id="2-docker_1">2. Dockerが起動していない<a class="headerlink" href="#2-docker_1" title="Permanent link">&para;</a></h4>
-<p><div class="highlight"><pre><span></span><code>エラー: Docker daemon is not running
-</code></pre></div>
-<strong>解決方法</strong>: Docker Desktopを起動</p>
-<h4 id="3">3. ポートが使用中<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
-<p><div class="highlight"><pre><span></span><code>エラー: Port 8080 is already in use
-</code></pre></div>
-<strong>解決方法</strong>: <code>.env</code>ファイルでポート番号を変更
-<div class="highlight"><pre><span></span><code>ORCHESTRATE_PORT=8081
-</code></pre></div></p>
-<h2 id="_13">練習問題<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
-<h3 id="1_1">問題1: 環境確認スクリプトの作成<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
-<p>以下の内容で<code>check_env.py</code>を作成してください：</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">check_python</span><span class="p">():</span>
-    <span class="n">version</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Python バージョン: </span><span class="si">{</span><span class="n">version</span><span class="o">.</span><span class="n">major</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">version</span><span class="o">.</span><span class="n">minor</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">version</span><span class="o">.</span><span class="n">micro</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">version</span><span class="o">.</span><span class="n">major</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">version</span><span class="o">.</span><span class="n">minor</span> <span class="o">&gt;=</span> <span class="mi">11</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Pythonのバージョンは問題ありません&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Python 3.11以上が必要です&quot;</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">check_docker</span><span class="p">():</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;docker&#39;</span><span class="p">,</span> <span class="s1">&#39;--version&#39;</span><span class="p">],</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Docker: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Dockerは正常にインストールされています&quot;</span><span class="p">)</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Dockerがインストールされていません&quot;</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">check_orchestrate</span><span class="p">():</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;orchestrate&#39;</span><span class="p">,</span> <span class="s1">&#39;--version&#39;</span><span class="p">],</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Orchestrate: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Watson X Orchestrate ADKは正常にインストールされています&quot;</span><span class="p">)</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Watson X Orchestrate ADKがインストールされていません&quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 環境チェック ===&quot;</span><span class="p">)</span>
-    <span class="n">check_python</span><span class="p">()</span>
-    <span class="n">check_docker</span><span class="p">()</span>
-    <span class="n">check_orchestrate</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="_14">解答<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>check_env.py
-</code></pre></div>
-<p>期待される出力：
-<div class="highlight"><pre><span></span><code>=== 環境チェック ===
-Python バージョン: 3.12.0
-✅ Pythonのバージョンは問題ありません
-Docker: Docker version 24.0.0, build abcdef
-✅ Dockerは正常にインストールされています
-Orchestrate: orchestrate version 1.0.0
-✅ Watson X Orchestrate ADKは正常にインストールされています
-</code></pre></div></p>
-<h2 id="_15">宿題<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
-<h3 id="1_2">課題1: 環境構築ドキュメントの作成<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h3>
-<p>自分の環境で実際にセットアップを行い、以下の内容を含むドキュメントを作成してください：</p>
-<ol>
-<li>遭遇した問題とその解決方法</li>
-<li>セットアップにかかった時間</li>
-<li>COBOLの開発環境構築と比較した感想</li>
-<li>改善提案があれば記載</li>
-</ol>
-<h3 id="2-docker_2">課題2: Dockerコンテナの理解<a class="headerlink" href="#2-docker_2" title="Permanent link">&para;</a></h3>
-<p>以下のコマンドを実行し、結果を記録してください：</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># 実行中のコンテナを確認</span>
-docker<span class="w"> </span>ps
-
-<span class="c1"># すべてのコンテナを確認</span>
-docker<span class="w"> </span>ps<span class="w"> </span>-a
-
-<span class="c1"># Dockerイメージを確認</span>
-docker<span class="w"> </span>images
-</code></pre></div>
-<p>それぞれのコマンドが何を表示しているか、COBOLの概念と比較して説明してください。</p>
-<h2 id="_16">まとめ<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
-<p>おめでとうございます！Watson X Orchestrateの開発環境が整いました。</p>
-<p>次のステップでは、実際にAIエージェントを作成します。COBOLプログラムを書くのと同じように、一つずつ丁寧に進めていきましょう。</p>
-<p>環境構築は最初は大変ですが、一度セットアップすれば後は簡単です。COBOLの開発環境も最初は大変だったことを思い出してください。新しい技術も同じです！</p>
+<h3 id="_10">フレームワーク選択のガイドライン<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ニーズ</th>
+<th>推奨フレームワーク</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>エンタープライズ向け本番環境</td>
+<td><strong>ADK</strong> または AutoGen</td>
+</tr>
+<tr>
+<td>迅速なプロトタイピング</td>
+<td>CrewAI</td>
+</tr>
+<tr>
+<td>複雑なワークフロー</td>
+<td>LangGraph</td>
+</tr>
+<tr>
+<td>IBMエコシステムとの統合</td>
+<td><strong>ADK</strong></td>
+</tr>
+<tr>
+<td>実験的な用途</td>
+<td>AutoGPT、OpenAI Swarm</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">次のステップ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>ADKの基本を理解したところで、次は実際にADKを使ってエージェントを開発する方法を学びましょう。</p>
+<hr />
+<p><a href="../watsonx_intro/">前へ ◀ Watson X Orchestrateとは</a>　｜　<a href="../watsonx_ai_basics/">次へ ▶ AI・生成AIの基礎知識</a></p>
 
 
 
